@@ -1,10 +1,26 @@
 <template>
   <div>
+    <navbar />
     <nuxt />
   </div>
 </template>
 
+<script>
+import navbar from '@/components/nav/Navbar'
+
+export default {
+  components: {
+    navbar
+  }
+}
+</script>
+
 <style>
+:root {
+  --background: #242529;
+  --text: #FFF;
+}
+
 html {
   font-family: 'Catamaran', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -21,5 +37,10 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
 }
 </style>
