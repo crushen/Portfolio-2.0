@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import navbar from '@/components/nav/Navbar'
+import navbar from '@/components/nav/Navbar';
 
 export default {
   components: {
@@ -42,5 +42,10 @@ html {
 a {
   text-decoration: none;
   color: var(--text);
+}
+
+.content {
+  width: 90%;
+  margin: auto;
 }
 </style>
