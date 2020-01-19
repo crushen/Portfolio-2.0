@@ -48,6 +48,15 @@ a {
   color: var(--white);
 }
 
+.title {
+  font-size: 10vw;
+  color: var(--white);
+  font-family: 'Vesper Libre', serif;
+  letter-spacing: normal;
+  font-weight: 900;
+  line-height: 45px;
+}
+
 .section-padding {
   padding-top: 80px;
 }
