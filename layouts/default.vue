@@ -22,8 +22,9 @@ export default {
 }
 
 html {
-  font-family: 'Catamaran', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Alata', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
+  letter-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

@@ -1,8 +1,8 @@
 <template>
   <section id="landing">
     <div class="content">
-      <h1>Frontend web developer</h1>
-      <h2>Creating websites and applications to help brands with their online presence.</h2>
+      <h1>Charlotte Rushen</h1>
+      <h2>Website and web app development, helping brands perfect their online presence.</h2>
     </div>
   </section>
 </template>
@@ -20,13 +20,14 @@
 h1 {
   font-size: 18px;
   color: #9AA0A6;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 10vw;
   color: var(--text);
   font-family: 'Vesper Libre', serif;
+  letter-spacing: normal;
   font-weight: 900;
   line-height: 45px;
 }
