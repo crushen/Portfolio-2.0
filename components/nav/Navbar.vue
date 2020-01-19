@@ -15,8 +15,8 @@
 header {
   width: 100vw;
   padding: 4px 16px;
-  background: var(--background);
-  color: var(--text);
+  background: var(--black);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,7 +31,7 @@ header {
 .nav-line {
   width: 100%;
   height: 3px;
-  background: var(--text);
+  background: var(--white);
 }
 
 .nav-line:not(:last-of-type) {

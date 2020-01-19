@@ -10,7 +10,7 @@
 <style scoped>
 #landing {
   height: 70vh;
-  background: var(--background);
+  background: var(--black);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,13 +19,13 @@
 
 h1 {
   font-size: 18px;
-  color: #9AA0A6;
+  color: var(--grey);
   margin-bottom: 16px;
 }
 
 h2 {
   font-size: 10vw;
-  color: var(--text);
+  color: var(--white);
   font-family: 'Vesper Libre', serif;
   letter-spacing: normal;
   font-weight: 900;

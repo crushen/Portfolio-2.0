@@ -17,8 +17,11 @@ export default {
 
 <style>
 :root {
-  --background: #242529;
-  --text: #FFF;
+  --black: #242529;
+  --white: #FFF;
+  --light-grey: #c7c7c9;
+  --grey: #9AA0A6;
+  --dark-grey: #3f4047;
 }
 
 html {
@@ -42,7 +45,11 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--white);
+}
+
+.section-padding {
+  padding-top: 80px;
 }
 
 .content {
