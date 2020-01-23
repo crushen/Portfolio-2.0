@@ -30,10 +30,19 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+  padding-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
 .social {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  align-items: flex-start;
+  margin-top: 16px;
 }
 
 h3 {
