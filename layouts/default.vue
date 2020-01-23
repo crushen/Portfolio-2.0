@@ -2,15 +2,18 @@
   <div>
     <navbar />
     <nuxt />
+    <my-footer />
   </div>
 </template>
 
 <script>
 import navbar from '@/components/nav/Navbar';
+import myFooter from '@/components/Footer';
 
 export default {
   components: {
-    navbar
+    navbar,
+    myFooter
   }
 }
 </script>
@@ -19,6 +22,7 @@ export default {
 :root {
   --black: #242529;
   --white: #FFF;
+  --off-white: #F2F2F2;
   --light-grey: #c7c7c9;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;

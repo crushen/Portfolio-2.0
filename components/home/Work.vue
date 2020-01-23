@@ -84,7 +84,7 @@ img {
 .text {
   min-height: 120px;
   height: 30%;
-  background: white;
+  background: var(--off-white);
   color: var(--black);
   padding: 0 5%;
   display: flex;
