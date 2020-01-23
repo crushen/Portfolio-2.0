@@ -45,6 +45,10 @@ html {
   padding: 0;
 }
 
+p {
+  line-height: 24px;
+}
+
 a {
   text-decoration: none;
   color: var(--white);
