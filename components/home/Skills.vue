@@ -64,7 +64,7 @@ h2 {
 
 p {
   color: var(--light-grey);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .line {

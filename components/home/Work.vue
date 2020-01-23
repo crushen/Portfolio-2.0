@@ -35,7 +35,7 @@ export default {
           image: meaheLogo
         },
         {
-          title: 'Chord Generator',
+          title: 'Chord Progressions',
           text: "Taiwanese creative design company that's based in London.",
           image: guitar
         },

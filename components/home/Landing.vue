@@ -18,8 +18,12 @@
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 5vw;
   color: var(--grey);
   margin-bottom: 16px;
+}
+
+h2 {
+  line-height: 14vw;
 }
 </style>
