@@ -2,7 +2,7 @@
   <section id="work" class="section-padding">
     <div class="content">
       <h2 class="title">Work</h2>
-      <p>See all</p>
+      <p class="sub-title">See all</p>
       <!-- <div class="image-container">
         <img :src="meaheLogo" alt="">
       </div>
@@ -51,17 +51,6 @@ export default {
 </script>
 
 <style scoped>
-#work {
-  background: var(--black);
-  color: var(--white);
-}
-
-p {
-  font-size: 18px;
-  color: var(--grey);
-  margin-top: 4px;
-}
-
 .image-container {
   width: 100%;
   background: #171719;
@@ -110,7 +99,6 @@ h3 {
 
 .text p {
   color: var(--dark-grey);
-  font-size: 14px;
 }
 
 </style>

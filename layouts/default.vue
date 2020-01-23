@@ -27,6 +27,8 @@ export default {
 html {
   font-family: 'Alata', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
+  background: var(--black);
+  color: var(--white);
   letter-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -55,6 +57,12 @@ a {
   letter-spacing: normal;
   font-weight: 900;
   line-height: 45px;
+}
+
+.sub-title {
+  font-size: 18px;
+  color: var(--grey);
+  margin-top: 4px;
 }
 
 .section-padding {

@@ -42,11 +42,6 @@ export default {
 </script>
 
 <style scoped>
-#skills {
-  background: var(--black);
-  margin-top: 20px;
-}
-
 .card {
   width: 80%;
   margin: auto;
@@ -64,7 +59,6 @@ h2 {
 
 p {
   color: var(--light-grey);
-  font-size: 16px;
 }
 
 .line {
