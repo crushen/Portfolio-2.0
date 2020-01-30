@@ -78,7 +78,17 @@ a {
 }
 
 .content {
-  width: 90%;
+  width: 85%;
   margin: auto;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
 }
 </style>

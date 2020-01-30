@@ -13,7 +13,7 @@
 
 <style scoped>
 header {
-  padding: 4px 16px;
+  padding: 4px 5%;
   background: var(--black);
   color: var(--white);
   display: flex;
@@ -39,5 +39,11 @@ header {
 
 a {
   color: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    padding: 8px 7.5%;
+  }
 }
 </style>

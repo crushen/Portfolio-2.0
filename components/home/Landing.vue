@@ -30,4 +30,16 @@ h1 {
 h2 {
   line-height: 14vw;
 }
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 90px;
+  }
+}
 </style>
