@@ -37,22 +37,28 @@ export default {
 
 h2 {
   color: var(--black);
-  margin-bottom: 8px;
 }
 
 .social {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 16px;
+  
 }
 
 h3 {
   color: var(--black);
+  margin: 24px 0 6px 0;
 }
 
 a {
   color: var(--dark-grey);
-  line-height: 28px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 1100px) {
+  h2 {
+    margin-bottom: 50px;
+  }
 }
 </style>

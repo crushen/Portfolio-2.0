@@ -23,23 +23,28 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 a, p {
   color: var(--grey);
-  font-size: 14px;
-  line-height: 28px;
+  line-height: 30px;
 }
 
 p {
   font-size: 12px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 @media screen and (min-width: 600px) {
   footer {
     padding: 100px 0 50px 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .page-links {
+    margin-top: 50px;
   }
 }
 </style>

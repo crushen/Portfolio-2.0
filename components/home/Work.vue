@@ -104,7 +104,7 @@ h3 {
   .card {
     height: 400px;
     /* max-width: 370px; */
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
   }
 }
 </style>
