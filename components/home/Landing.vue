@@ -31,7 +31,7 @@ h2 {
   line-height: 14vw;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   h1 {
     font-size: 24px;
     margin-bottom: 24px;

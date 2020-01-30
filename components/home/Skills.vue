@@ -35,7 +35,7 @@
 
 .card {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .card:not(:first-of-type) {
@@ -57,5 +57,30 @@ h2 {
 
 a {
   font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+  .card:not(:first-of-type) {
+    padding-top: 0;
+  }
+
+  .card:nth-of-type(1), .card:nth-of-type(2) {
+    margin-bottom: 50px;
+  }
+
+  .line {
+    display: none;
+  }
 }
 </style>
