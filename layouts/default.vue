@@ -49,13 +49,18 @@ html {
   padding: 0;
 }
 
-p {
+p, a {
+  font-size: 14px;
   line-height: 24px;
 }
 
 a {
   text-decoration: none;
   color: var(--dark-grey);
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .title {
@@ -85,10 +90,6 @@ a {
 @media screen and (min-width: 600px) {
   .title {
     font-size: 40px;
-  }
-
-  .sub-title {
-    font-size: 20px;
   }
 
   .section-padding {

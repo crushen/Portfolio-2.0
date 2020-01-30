@@ -4,11 +4,11 @@
       <h2 class="title">Contact</h2>
         <div class="contact-container">
             <div class="contact">
-              <h3 class="sub-title">General enquiries</h3>
+              <h3>General enquiries</h3>
               <a href="mailto:charlotterushen@hotmail.com">charlotterushen@hotmail.com</a>
             </div>
             <div class="contact social">
-              <h3 class="sub-title">Follow me</h3>
+              <h3>Follow me</h3>
               <a href="https://github.com/crushen" target="_blank">GitHub</a>
               <a href="https://codepen.io/charlotterushen/" target="_blank">Codepen</a>
               <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>
