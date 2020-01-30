@@ -1,20 +1,19 @@
 <template>
   <section id="work" class="section-padding">
     <div class="content">
-      <h2 class="title">Work</h2>
-      <p class="sub-title">See all</p>
-      <!-- <div class="image-container">
-        <img :src="meaheLogo" alt="">
+      <div class="title-container">
+        <h2 class="title">Work</h2>
+        <p class="sub-title">See all</p>
       </div>
-      <div class="image-container">
-        <img :src="emmaLogo" alt="">
-      </div> -->
-      <div class="card" v-for="card in work" :key="card.title">
-        <div class="image" :style="{ backgroundImage: `url(${card.image})` }"></div>
-        <div class="text">
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.text }}</p>
-        </div>
+
+      <div class="cards-container">
+        <div class="card" v-for="card in work" :key="card.title">
+          <div class="image" :style="{ backgroundImage: `url(${card.image})` }"></div>
+          <div class="text">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.text }}</p>
+          </div>
+        </div>       
       </div>
     </div>
   </section>
@@ -51,19 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.image-container {
-  width: 100%;
-  background: #171719;
-  margin-top: 32px;
-}
-
-img {
-  width: 80%;
-  display: block;
-  margin: auto;
-  padding: 10% 0;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -101,4 +87,23 @@ h3 {
   color: var(--dark-grey);
 }
 
+@media screen and (min-width: 600px) {
+  .card {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3vw;
+  }
+
+  .card {
+    height: 400px;
+    /* max-width: 370px; */
+    margin: 0 auto;
+  }
+}
 </style>
