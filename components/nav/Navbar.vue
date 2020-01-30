@@ -13,7 +13,6 @@
 
 <style scoped>
 header {
-  width: 100vw;
   padding: 4px 16px;
   background: var(--black);
   color: var(--white);
