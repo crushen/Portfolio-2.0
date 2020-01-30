@@ -44,7 +44,7 @@
 
 h2 {
   color: var(--black);
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 16px;
 }
 
@@ -81,6 +81,17 @@ a {
 
   .line {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+   .card {
+    width: 20%;
+    max-width: 217px;
+  }
+
+  .card:nth-of-type(1), .card:nth-of-type(2) {
+    margin-bottom: 0;
   }
 }
 </style>
