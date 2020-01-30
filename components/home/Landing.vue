@@ -17,12 +17,8 @@
   justify-content: center;
 }
 
-.content {
-  padding-bottom: 70px;
-}
-
 h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   color: var(--grey);
   margin-bottom: 16px;
 }

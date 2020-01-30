@@ -64,7 +64,7 @@ h3 {
 }
 
 .title {
-  font-size: 10vw;
+  font-size: 9vw;
   color: var(--white);
   font-family: 'Vesper Libre', serif;
   letter-spacing: normal;
