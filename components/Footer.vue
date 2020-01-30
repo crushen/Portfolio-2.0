@@ -14,21 +14,9 @@
   </footer>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-
-    }
-  }
-}
-</script>
-
 <style scoped>
 footer {
-  background: var(--off-white);
-  color: var(--dark-grey);
-  padding: 32px 0;
+  padding: 80px 0 40px 0;
 }
 
 .page-links {

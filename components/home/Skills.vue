@@ -1,47 +1,38 @@
 <template>
   <section id="skills" class="section-padding">
     <div class="content">
-      <div class="card" v-for="card in skills" :key="card.title">
-        <h2>{{ card.title }}</h2>
-        <p v-html="card.text"></p>
+      <div class="card">
+        <h2>Frontend Development</h2>
+        <p>Using HTML, CSS (Bootstrap and Materialize), JavaScript (ES6+) and Git with VS Code, GraphQL and Vue/Nuxt, in order to bring creative designs to life.</p>
         <div class="line"></div>
+      </div>
+
+      <div class="card">
+        <h2>Content Management</h2>
+        <p>Making sure that your content is easy to access and update via a Headless CMS, which will then display seamlessly on your bespoke frontend.</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="card">
+        <h2>Responsive Design</h2>
+        <p>The majority of internet users access the web via a mobile device, so it's important that websites are created using responsive mobile-first design principles.</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="card">
+        <h2>Accessibility</h2>
+        <p>Everyone deserves to be able to access content on the internet, and this can be achieved by sticking to <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">The Web Content Accessibility Guidelines (WCAG).</a></p>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      skills: [
-        { 
-          title: 'Frontend Development',
-          text: 'Using HTML, CSS (Bootstrap and Materialize), JavaScript (ES6+) and Git with VS Code, GraphQL and Vue/Nuxt, in order to bring creative designs to life.',
-          img: ''
-        },
-        { 
-          title: 'Content Managment',
-          text: 'Making sure that your content is easy to access and update via a Headless CMS, which will then display seamlessly on your bespoke frontend.',
-          img: ''
-        },
-        { 
-          title: 'Responsive Design',
-          text: "The majority of internet users access the web via a mobile device, so it's important that websites are created using responsive mobile-first design principles.",
-          img: ''
-        },
-        { 
-          title: 'Accessibility',
-          text: 'Everyone deserves to be able to access content on the internet, and this can be acheived by sticking to <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">The Web Content Accessibility Guidelines (WCAG).</a>',
-          img: ''
-        }
-      ]
-    }
-  }
-}
-</script>
-
 <style scoped>
+#skills {
+  background: var(--off-white);
+  color: var(--dark-grey);
+}
+
 .card {
   width: 80%;
   margin: auto;
@@ -52,19 +43,19 @@ export default {
 }
 
 h2 {
-  color: var(--white);
+  color: var(--black);
   font-size: 22px;
   margin-bottom: 16px;
-}
-
-p {
-  color: var(--light-grey);
 }
 
 .line {
   width: 100%;
   height: 1px;
-  background: var(--dark-grey);
+  background: var(--light-grey);
   margin-top: 50px;
+}
+
+a {
+  font-weight: bold;
 }
 </style>

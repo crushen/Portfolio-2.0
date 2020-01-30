@@ -9,12 +9,16 @@
 
 <style scoped>
 #landing {
-  height: 70vh;
+  height: 100vh;
   background: var(--black);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.content {
+  padding-bottom: 70px;
 }
 
 h1 {

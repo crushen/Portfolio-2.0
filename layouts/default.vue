@@ -22,7 +22,7 @@ export default {
 :root {
   --black: #242529;
   --white: #FFF;
-  --off-white: #F2F2F2;
+  --off-white: #F0F0F0;
   --light-grey: #c7c7c9;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;
@@ -55,7 +55,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--dark-grey);
 }
 
 .title {
@@ -74,7 +74,7 @@ a {
 }
 
 .section-padding {
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 .content {

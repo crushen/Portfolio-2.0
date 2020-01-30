@@ -36,4 +36,8 @@ header {
 .nav-line:not(:last-of-type) {
   margin-bottom: 4px;
 }
+
+a {
+  color: var(--white);
+}
 </style>

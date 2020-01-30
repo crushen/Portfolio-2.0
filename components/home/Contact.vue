@@ -31,10 +31,12 @@ export default {
 
 <style scoped>
 #contact {
-  padding-bottom: 50px;
+  background: var(--off-white);
+  color: var(--dark-grey);
 }
 
 h2 {
+  color: var(--black);
   margin-bottom: 8px;
 }
 
@@ -46,10 +48,11 @@ h2 {
 }
 
 h3 {
-  font-weight: normal;
+  color: var(--black);
 }
 
 a {
+  color: var(--dark-grey);
   line-height: 28px;
 }
 </style>
