@@ -90,5 +90,9 @@ a {
   .sub-title {
     font-size: 20px;
   }
+
+  .section-padding {
+    padding: 100px 0;
+  }
 }
 </style>

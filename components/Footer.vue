@@ -36,4 +36,10 @@ p {
   font-size: 12px;
   margin-top: 32px;
 }
+
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 100px 0 50px 0;
+  }
+}
 </style>
