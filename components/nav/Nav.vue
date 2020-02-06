@@ -5,7 +5,7 @@
         <h1>logo.</h1>
       </nuxt-link>
       <button
-        @click="active = true"
+        @click="openNav"
         class="nav-button">
         <div class="nav-line"></div>
         <div class="nav-line"></div>
@@ -13,16 +13,20 @@
       </button>
     </header>
 
-    <div 
-      id="nav-container"
-      v-if="active" 
-      v-on-clickaway="closeNav">
-      <nav>
-        <nuxt-link to="/" @click.native="closeNav">Home</nuxt-link>
-        <nuxt-link to="/work" @click.native="closeNav">Work</nuxt-link>
-        <nuxt-link to="/contact" @click.native="closeNav">Contact</nuxt-link>
-      </nav>
-    </div>
+    <transition 
+      enter-active-class="animated slideInRight faster" 
+      leave-active-class="animated slideOutRight faster">
+      <div 
+        class="nav-container"
+        v-if="active" 
+        v-on-clickaway="closeNav">
+        <nav>
+          <nuxt-link to="/" @click.native="closeNav">Home</nuxt-link>
+          <nuxt-link to="/work" @click.native="closeNav">Work</nuxt-link>
+          <nuxt-link to="/contact" @click.native="closeNav">Contact</nuxt-link>
+        </nav>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -37,8 +41,13 @@ export default {
     }
   },
   methods: {
+    openNav() {
+      this.active = true;
+      //document.querySelector('.nav-container').style.right = 0;
+    },
     closeNav() {
       this.active = false;
+      //document.querySelector('.nav-container').style.right = '-100%';
     }
   }
 }
@@ -78,19 +87,23 @@ a {
   color: var(--white);
 }
 
-#nav-container {
+/* RIGHT NAV DRAWER */
+
+.nav-container {
   height: 100vh;
   width: 75%;
+  max-width: 400px;
   background: #81d4fa;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-
+  transition: 0.5s;
 }
 
 nav {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin: 100px 0 0 32px;
 }
 
@@ -102,6 +115,8 @@ nav a {
 nav .nuxt-link-exact-active {
   color: var(--black);
 }
+
+/* TABLET + */
 
 @media screen and (min-width: 600px) {
   header {
