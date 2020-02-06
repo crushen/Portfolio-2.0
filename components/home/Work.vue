@@ -83,23 +83,11 @@ export default {
   .title-container {
     margin-bottom: 50px;
   }
-
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 4vw;
-  }
 }
 
 @media screen and (min-width: 1100px) {
   .content {
     display: block;
-  }
-
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 3vw;
   }
 }
 </style>
