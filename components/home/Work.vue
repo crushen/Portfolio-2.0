@@ -30,7 +30,7 @@ import guitar from '@/static/guitar.jpg';
 export default {
   data() {
     return {
-      numberOfCards: 3,
+      numberOfCards: 2,
       innerWidth: null,
       work: [
         {
@@ -64,10 +64,8 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth;
-      if(this.innerWidth < 600) {
-        this.numberOfCards = 3;
-      } else if(this.innerWidth > 600 && this.innerWidth < 1100) {
-        this.numberOfCards = 4;
+      if(this.innerWidth < 1100) {
+        this.numberOfCards = 2;
       } else {
         this.numberOfCards = 3;
       }
