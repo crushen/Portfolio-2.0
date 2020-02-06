@@ -36,6 +36,11 @@ export default {
   background-repeat: no-repeat;
 }
 
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
 .text {
   min-height: 120px;
   height: 30%;

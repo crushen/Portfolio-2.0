@@ -79,11 +79,6 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
 @media screen and (min-width: 600px) {
   .title-container {
     margin-bottom: 50px;
