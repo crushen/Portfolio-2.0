@@ -7,7 +7,10 @@
       </div>
 
       <div class="cards-container">
-        <div class="card" v-for="card in work" :key="card.title">
+        <div
+          v-for="card in cardsShown"
+          :key="card.title"
+          class="card">
           <div class="image" :style="{ backgroundImage: `url(${card.image})` }"></div>
           <div class="text">
             <h3>{{ card.title }}</h3>
@@ -27,6 +30,8 @@ import guitar from '@/static/guitar.jpg';
 export default {
   data() {
     return {
+      numberOfCards: 3,
+      innerWidth: null,
       work: [
         {
           title: 'Meahe Design',
@@ -43,8 +48,30 @@ export default {
           text: "Online portfolio for a UI/UX Designer and Creative.",
           image: emmaLogo
         },
+        {
+          title: 'Meahe Design',
+          text: "Taiwanese creative design company that's based in London.",
+          image: meaheLogo
+        }
       ]
     }
+  },
+  computed: {
+    cardsShown() {
+      return this.work.slice(0, this.numberOfCards);
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth;
+      if(this.innerWidth < 600) {
+        this.numberOfCards = 3;
+      } else if(this.innerWidth > 600 && this.innerWidth < 1100) {
+        this.numberOfCards = 4;
+      } else {
+        this.numberOfCards = 3;
+      }
+    });
   }
 }
 </script>
@@ -89,12 +116,31 @@ h3 {
 }
 
 @media screen and (min-width: 600px) {
+  .title-container {
+    margin-bottom: 50px;
+  }
+
   .card {
-    margin-top: 50px;
+    margin-top: 0px;
+    height: 40vw;
+  }
+
+  .card:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4vw;
   }
 }
 
 @media screen and (min-width: 1100px) {
+  .content {
+    display: block;
+  }
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
