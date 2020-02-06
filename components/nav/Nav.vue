@@ -1,16 +1,18 @@
 <template>
   <div>
     <header>
-      <nuxt-link to="/">
-        <h1>logo.</h1>
-      </nuxt-link>
-      <button
-        @click="openNav"
-        class="nav-button">
-        <div class="nav-line"></div>
-        <div class="nav-line"></div>
-        <div class="nav-line"></div>
-      </button>
+      <div class="nav-bar">
+        <nuxt-link to="/">
+          <h1>logo.</h1>
+        </nuxt-link>
+        <button
+          @click="openNav"
+          class="nav-button">
+          <div class="nav-line"></div>
+          <div class="nav-line"></div>
+          <div class="nav-line"></div>
+        </button>
+      </div>
     </header>
 
     <transition 
@@ -60,9 +62,15 @@ header {
   padding: 10px 5%;
   background: var(--black);
   color: var(--white);
+  
+}
+
+.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .nav-button {
