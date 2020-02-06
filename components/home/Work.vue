@@ -47,11 +47,6 @@ export default {
           title: 'Emma Kate Parkinson',
           text: "Online portfolio for a UI/UX Designer and Creative.",
           image: emmaLogo
-        },
-        {
-          title: 'Meahe Design',
-          text: "Taiwanese creative design company that's based in London.",
-          image: meaheLogo
         }
       ]
     }
