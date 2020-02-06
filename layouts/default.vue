@@ -47,6 +47,14 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
 }
 
 p, a {
