@@ -7,27 +7,29 @@
       </div>
 
       <div class="cards-container">
-        <div
+        <work-card
           v-for="card in cardsShown"
           :key="card.title"
-          class="card">
-          <div class="image" :style="{ backgroundImage: `url(${card.image})` }"></div>
-          <div class="text">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.text }}</p>
-          </div>
-        </div>       
+          :cardImage="card.image"
+          :cardTitle="card.title"
+          :cardText="card.text">
+        </work-card>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import workCard from '@/components/work/WorkCard';
+
 import meaheLogo from '@/static/meahe-logo.png';
 import emmaLogo from '@/static/emma-logo.png';
 import guitar from '@/static/guitar.jpg';
 
 export default {
+  components: {
+    workCard
+  },
   data() {
     return {
       numberOfCards: null,
@@ -77,56 +79,14 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  height: 70vw;
-  margin-top: 32px;
-}
-
-.image {
-  min-height: 180px;
-  height: 70%;
-  background: #171719;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.text {
-  min-height: 120px;
-  height: 30%;
-  background: var(--off-white);
-  color: var(--black);
-  padding: 0 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
 h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
-.text p {
-  color: var(--dark-grey);
-}
-
 @media screen and (min-width: 600px) {
   .title-container {
     margin-bottom: 50px;
-  }
-
-  .card {
-    margin-top: 0px;
-    height: 40vw;
-  }
-
-  .card:not(:last-of-type) {
-    margin-bottom: 32px;
   }
 
   .cards-container {
@@ -145,12 +105,6 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 3vw;
-  }
-
-  .card {
-    height: 400px;
-    /* max-width: 370px; */
-    margin: 50px auto 0 auto;
   }
 }
 </style>
