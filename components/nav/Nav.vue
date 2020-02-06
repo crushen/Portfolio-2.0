@@ -17,9 +17,9 @@
       enter-active-class="animated slideInRight faster" 
       leave-active-class="animated slideOutRight faster">
       <div 
-        class="nav-container"
         v-if="active" 
-        v-on-clickaway="closeNav">
+        v-on-clickaway="closeNav"
+        class="nav-container">
         <nav>
           <nuxt-link to="/" @click.native="closeNav">Home</nuxt-link>
           <nuxt-link to="/work" @click.native="closeNav">Work</nuxt-link>
