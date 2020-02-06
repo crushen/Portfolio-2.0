@@ -30,7 +30,7 @@ import guitar from '@/static/guitar.jpg';
 export default {
   data() {
     return {
-      numberOfCards: 2,
+      numberOfCards: null,
       innerWidth: null,
       work: [
         {
@@ -51,19 +51,26 @@ export default {
       ]
     }
   },
+  methods: {
+    calculateCards() {
+      if(this.innerWidth < 1100) {
+        this.numberOfCards = 2;
+      } else {
+        this.numberOfCards = 3;
+      }
+    }
+  },
   computed: {
     cardsShown() {
       return this.work.slice(0, this.numberOfCards);
     }
   },
   mounted() {
+    this.innerWidth = window.innerWidth;
+    this.calculateCards();
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth;
-      if(this.innerWidth < 1100) {
-        this.numberOfCards = 2;
-      } else {
-        this.numberOfCards = 3;
-      }
+      this.calculateCards();
     });
   }
 }
