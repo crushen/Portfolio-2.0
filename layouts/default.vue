@@ -86,6 +86,16 @@ h3 {
   margin-top: 4px;
 }
 
+.page-title {
+  line-height: 14vw;
+}
+
+.page-sub-title {
+  font-size: 4vw;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+
 .section-padding {
   padding: 80px 0;
 }
@@ -103,6 +113,25 @@ h3 {
 
   .section-padding {
     padding: 100px 0;
+  }
+
+  .page-title {
+    font-size: 60px;
+    line-height: 90px;
+    max-width: 950px;
+  }
+
+  .page-sub-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-title {
+    font-size: 70px;
+    line-height: 100px;
+    max-width: 1200px;
   }
 }
 </style>
