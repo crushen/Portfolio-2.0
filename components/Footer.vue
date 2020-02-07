@@ -1,7 +1,7 @@
 <template>
   <footer id="footer">
     <div class="content">
-      <h1>logo.</h1>
+      <p class="logo">charlotte rushen.</p>
         <div class="footer-content">
           <div class="page-links">
             <nuxt-link to="/">Home</nuxt-link>
@@ -34,6 +34,11 @@ a, p {
 p {
   font-size: 12px;
   margin-top: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 600px) {

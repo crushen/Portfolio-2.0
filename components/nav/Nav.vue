@@ -3,7 +3,7 @@
     <header>
       <div class="nav-bar">
         <nuxt-link to="/">
-          <h1>logo.</h1>
+          <p class="logo">charlotte rushen.</p>
         </nuxt-link>
         <button
           @click="openNav"

@@ -71,6 +71,11 @@ h3 {
   font-size: 18px;
 }
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .title {
   font-size: 9vw;
   color: var(--white);
