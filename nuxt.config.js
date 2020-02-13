@@ -1,9 +1,6 @@
 
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'Charlotte Rushen',
     meta: [
@@ -19,38 +16,29 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-  /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
-  /*
-  ** Build configuration
-  */
+  plugins: [],
+  buildModules: [],
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
+    }
+  },
+  modules: ['@nuxtjs/apollo'],
+
+  apollo: {
+    //tokenName: 'yourApolloTokenName', // optional, default: apollo-token
+    cookieAttributes: {
+      expires: 7,
+      path: '/', 
+      secure: false,
+    },
+    includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+    authenticationType: 'Basic',
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://api-euwest.graphcms.com/v1/ck6kmcdvsoox601d7aez5hop5/master',
+        wsEndpoint: null, 
+        tokenName: 'apollo-token', 
+      }
     }
   }
 }
