@@ -25,6 +25,12 @@ export default {
   min-height: 300px;
   height: 70vw;
   margin-top: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .image {
