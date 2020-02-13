@@ -8,11 +8,11 @@
 
       <div class="cards-container">
         <work-card
-          v-for="card in work"
-          :key="card.title"
-          :cardImage="card.image"
-          :cardTitle="card.title"
-          :cardText="card.text">
+          v-for="project in projects"
+          :key="project.id"
+          :cardImage="project.thumbnail.url"
+          :cardTitle="project.title"
+          :cardText="project.subTitle">
         </work-card>
       </div>
     </div>
@@ -21,51 +21,34 @@
 
 <script>
 import workCard from '@/components/work/WorkCard';
+import gql from 'graphql-tag';
 
-import meaheLogo from '@/static/meahe-logo.png';
-import emmaLogo from '@/static/emma-logo.png';
-import guitar from '@/static/guitar.jpg';
+const projects = gql`
+  query projects {
+    projects {
+      id
+      title
+      subTitle
+      thumbnail {
+        url
+      }
+    }
+  }
+`
 
 export default {
+  apollo: {
+    projects: {
+      query: projects
+    }
+  },
   components: {
     workCard
   },
   data() {
     return {
       numberOfCards: null,
-      innerWidth: null,
-      work: [
-        {
-          title: 'Meahe Design',
-          text: "Taiwanese creative design company that's based in London.",
-          image: meaheLogo
-        },
-        {
-          title: 'Chord Progressions',
-          text: "Taiwanese creative design company that's based in London.",
-          image: guitar
-        },
-        {
-          title: 'Emma Kate Parkinson',
-          text: "Online portfolio for a UI/UX Designer and Creative.",
-          image: emmaLogo
-        },
-        {
-          title: 'Meahe Design',
-          text: "Taiwanese creative design company that's based in London.",
-          image: meaheLogo
-        },
-        {
-          title: 'Chord Progressions',
-          text: "Taiwanese creative design company that's based in London.",
-          image: guitar
-        },
-        {
-          title: 'Emma Kate Parkinson',
-          text: "Online portfolio for a UI/UX Designer and Creative.",
-          image: emmaLogo
-        }
-      ]
+      innerWidth: null
     }
   }
 }
