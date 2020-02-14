@@ -8,9 +8,9 @@
 
       <div class="cards-container">
         <work-card
-          v-for="project in projects"
-          :key="project.id"
-          :cardImage="project.thumbnail.url"
+          v-for="project in cardsShown"
+          :key="project.title"
+          :cardImage="project.thumbnail"
           :cardTitle="project.title"
           :cardText="project.subTitle">
         </work-card>
@@ -21,43 +21,49 @@
 
 <script>
 import workCard from '@/components/work/WorkCard';
-import gql from 'graphql-tag';
-
-let numberOfCards = 2;
+import meaheThumbnail from '@/static/meahe-logo.png';
+import guitarThumbnail from '@/static/guitar.jpg';
+import emmaThumbnail from '@/static/emma-logo.png';
 
 export default {
-  apollo: {
-    projects: {
-      query: gql`
-        query projects {
-          projects(first: ${numberOfCards}) {
-            id
-            title
-            subTitle
-            thumbnail {
-              url
-            }
-          }
-        }
-      `
-    }
-  },
-  components: {
+ components: {
     workCard
   },
   data() {
     return {
       numberOfCards: null,
-      innerWidth: null
+      innerWidth: null,
+      projects: [
+        {
+          title: 'Meahė Design',
+          subTitle: "Taiwanese creative design company that's based in London.",
+          thumbnail: meaheThumbnail
+        },
+        {
+          title: 'Chord Progressions',
+          subTitle: 'An app that randomly generates chord progressions.',
+          thumbnail: guitarThumbnail
+        },
+        {
+          title: 'Emma Kate Parkinson',
+          subTitle: 'Online portfolio for a UI/UX Designer and Creative.',
+          thumbnail: emmaThumbnail
+        }
+      ]
     }
   },
   methods: {
     calculateCards() {
       if(this.innerWidth < 1100) {
-        numberOfCards = 2;
+        this.numberOfCards = 2;
       } else {
-        numberOfCards = 3;
+        this.numberOfCards = 3;
       }
+    }
+  },
+  computed: {
+    cardsShown() {
+      return this.projects.slice(0, this.numberOfCards);
     }
   },
   mounted() {
@@ -66,7 +72,6 @@ export default {
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth;
       this.calculateCards();
-      console.log(numberOfCards);
     });
   }
 }

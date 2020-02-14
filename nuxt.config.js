@@ -22,23 +22,5 @@ export default {
     extend (config, ctx) {
     }
   },
-  modules: ['@nuxtjs/apollo'],
-
-  apollo: {
-    //tokenName: 'yourApolloTokenName', // optional, default: apollo-token
-    cookieAttributes: {
-      expires: 7,
-      path: '/', 
-      secure: false,
-    },
-    includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
-    authenticationType: 'Basic',
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'https://api-euwest.graphcms.com/v1/ck6kmcdvsoox601d7aez5hop5/master',
-        wsEndpoint: null, 
-        tokenName: 'apollo-token', 
-      }
-    }
-  }
+  modules: [],
 }

@@ -9,8 +9,8 @@
       <div class="cards-container">
         <work-card
           v-for="project in projects"
-          :key="project.id"
-          :cardImage="project.thumbnail.url"
+          :key="project.title"
+          :cardImage="project.thumbnail"
           :cardTitle="project.title"
           :cardText="project.subTitle">
         </work-card>
@@ -21,34 +21,35 @@
 
 <script>
 import workCard from '@/components/work/WorkCard';
-import gql from 'graphql-tag';
-
-const projects = gql`
-  query projects {
-    projects {
-      id
-      title
-      subTitle
-      thumbnail {
-        url
-      }
-    }
-  }
-`
+import meaheThumbnail from '@/static/meahe-logo.png';
+import guitarThumbnail from '@/static/guitar.jpg';
+import emmaThumbnail from '@/static/emma-logo.png';
 
 export default {
-  apollo: {
-    projects: {
-      query: projects
-    }
-  },
   components: {
     workCard
   },
   data() {
     return {
       numberOfCards: null,
-      innerWidth: null
+      innerWidth: null,
+      projects: [
+        {
+          title: 'Meahė Design',
+          subTitle: "Taiwanese creative design company that's based in London.",
+          thumbnail: meaheThumbnail
+        },
+        {
+          title: 'Chord Progressions',
+          subTitle: 'An app that randomly generates chord progressions.',
+          thumbnail: guitarThumbnail
+        },
+        {
+          title: 'Emma Kate Parkinson',
+          subTitle: 'Online portfolio for a UI/UX Designer and Creative.',
+          thumbnail: emmaThumbnail
+        }
+      ]
     }
   }
 }

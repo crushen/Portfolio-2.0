@@ -20,10 +20,11 @@ export default {
 
 <style scoped>
 .card {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   min-height: 300px;
   height: 70vw;
+  display: flex;
+  flex-direction: column;
   margin-top: 32px;
   cursor: pointer;
   transition: 0.2s;
@@ -77,7 +78,6 @@ h3 {
 @media screen and (min-width: 1100px) {
   .card {
     height: 400px;
-    /* max-width: 370px; */
     margin: 50px auto 0 auto;
   }
 }
