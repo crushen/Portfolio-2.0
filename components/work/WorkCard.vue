@@ -1,11 +1,13 @@
 <template>
-  <div class="card">
-    <div class="image" :style="{ backgroundImage: `url(${cardImage})` }"></div>
-    <div class="text">
-      <h3>{{ cardTitle }}</h3>
-      <p>{{ cardText }}</p>
-    </div>
-  </div>  
+  <nuxt-link :to="`work/${slug}`">
+    <div class="card">
+      <div class="image" :style="{ backgroundImage: `url(${cardImage})` }"></div>
+      <div class="text">
+        <h3>{{ cardTitle }}</h3>
+        <p>{{ cardText }}</p>
+      </div>
+    </div> 
+  </nuxt-link> 
 </template>
 
 <script>
@@ -13,7 +15,8 @@ export default {
   props: {
     cardImage: { type: String, required: true },
     cardTitle: { type: String, required: true, default: 'Card title' },
-    cardText: { type: String, required: true, default: 'Card Text' }
+    cardText: { type: String, required: true, default: 'Card Text' },
+    slug: { type: String, required: true }
   }
 }
 </script>
