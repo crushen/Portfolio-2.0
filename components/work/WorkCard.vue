@@ -31,6 +31,8 @@ export default {
   margin-top: 32px;
   cursor: pointer;
   transition: 0.2s;
+  position: relative;
+  z-index: 0;
 }
 
 .card:hover {

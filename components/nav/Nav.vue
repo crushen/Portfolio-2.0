@@ -62,7 +62,7 @@ header {
   padding: 10px 5%;
   background: var(--black);
   color: var(--white);
-  
+  z-index: 10;
 }
 
 .nav-bar {
@@ -106,6 +106,7 @@ a {
   top: 0;
   right: 0;
   transition: 0.5s;
+  z-index: 20;
 }
 
 nav {
