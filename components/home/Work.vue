@@ -10,7 +10,7 @@
         <work-card
           v-for="project in cardsShown"
           :key="project.title"
-          :cardImage="project.thumbnail"
+          :cardImage="project.thumbnail.url"
           :cardTitle="project.title"
           :cardText="project.subTitle"
           :slug="project.slug">
