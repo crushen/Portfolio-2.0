@@ -22,9 +22,6 @@
 
 <script>
 import workCard from '@/components/work/WorkCard';
-import meaheThumbnail from '@/static/meahe-logo.png';
-import guitarThumbnail from '@/static/guitar.jpg';
-import emmaThumbnail from '@/static/emma-logo.png';
 
 export default {
   components: {
@@ -46,26 +43,7 @@ export default {
     return {
       numberOfCards: null,
       innerWidth: null,
-      projects: [
-        {
-          title: 'Meahė Design',
-          subTitle: "Taiwanese creative design company that's based in London.",
-          thumbnail: meaheThumbnail,
-          slug: 'meahe-design'
-        },
-        {
-          title: 'Chord Progressions',
-          subTitle: 'An app that randomly generates chord progressions.',
-          thumbnail: guitarThumbnail,
-          slug: 'chord-progressions'
-        },
-        {
-          title: 'Emma Kate Parkinson',
-          subTitle: 'Online portfolio for a UI/UX Designer and Creative.',
-          thumbnail: emmaThumbnail,
-          slug: 'emma-kate-parkinson'
-        }
-      ]
+      projects: this.$store.state.data
     }
   }
 }
