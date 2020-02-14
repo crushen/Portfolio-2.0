@@ -22,6 +22,7 @@ export default {
   },
   head() {
     return {
+      title: 'Charlotte Rushen - Home',
       meta: [
         {
           hid: 'description',
@@ -30,6 +31,6 @@ export default {
         }
       ]
     }
-  },
+  }
 }
 </script>
