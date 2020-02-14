@@ -12,7 +12,8 @@
           :key="project.title"
           :cardImage="project.thumbnail"
           :cardTitle="project.title"
-          :cardText="project.subTitle">
+          :cardText="project.subTitle"
+          :slug="project.slug">
         </work-card>
       </div>
     </div>
@@ -49,17 +50,20 @@ export default {
         {
           title: 'Meahė Design',
           subTitle: "Taiwanese creative design company that's based in London.",
-          thumbnail: meaheThumbnail
+          thumbnail: meaheThumbnail,
+          slug: 'meahe-design'
         },
         {
           title: 'Chord Progressions',
           subTitle: 'An app that randomly generates chord progressions.',
-          thumbnail: guitarThumbnail
+          thumbnail: guitarThumbnail,
+          slug: 'chord-progressions'
         },
         {
           title: 'Emma Kate Parkinson',
           subTitle: 'Online portfolio for a UI/UX Designer and Creative.',
-          thumbnail: emmaThumbnail
+          thumbnail: emmaThumbnail,
+          slug: 'emma-kate-parkinson'
         }
       ]
     }
