@@ -29,6 +29,18 @@ export default {
   components: {
     workCard
   },
+  head() {
+    return {
+      title: 'Charlotte Rushen - Work',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Take a look at some of projects I've been working on recently."
+        }
+      ]
+    }
+  },
   data() {
     return {
       numberOfCards: null,

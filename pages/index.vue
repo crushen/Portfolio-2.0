@@ -19,6 +19,17 @@ export default {
     skills,
     work,
     contact
-  }
+  },
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Frontend Developer - Website and web app development, helping brands perfect their online presence."
+        }
+      ]
+    }
+  },
 }
 </script>
