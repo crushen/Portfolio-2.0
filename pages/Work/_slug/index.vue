@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <h1>{{ project.subTitle }}</h1>
-  </div>
+  <section :id="project.slug">
+    <div class="content">
+      <h1 class="page-sub-title">{{ project.title }}</h1>
+      <h2 class="title page-title">{{ project.subTitle }}</h2>
+    </div>
+  </section>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
   data() {
@@ -14,7 +17,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(["data"]),
+    ...mapState(['data']),
     project() {
       return this.data.find(item => item.slug === this.slug);
     }
