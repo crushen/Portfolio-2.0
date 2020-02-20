@@ -77,7 +77,7 @@ h3 {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
 }
 
@@ -119,6 +119,10 @@ h3 {
 }
 
 @media screen and (min-width: 600px) {
+  .logo {
+    font-size: 22px;
+  }
+  
   .title {
     font-size: 40px;
   }

@@ -37,13 +37,17 @@ p {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 @media screen and (min-width: 600px) {
   footer {
     padding: 100px 0 50px 0;
+  }
+
+  .logo {
+    font-size: 22px;
   }
 }
 
