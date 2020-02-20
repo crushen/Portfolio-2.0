@@ -11,10 +11,10 @@
 
     <section class="project-description section-padding">
       <div class="content">
-        <img 
-          :src="`/${project.thumbnail.url}`" 
-          :alt="project.thumbnail.alt"
-          class="header-image">
+        <video autoplay loop class="header-image">
+          <source :src="`/${project.video}`" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="row">
           <h3>Detail</h3>
           <div class="text">
@@ -35,14 +35,6 @@
           </div>
         </div>
 
-        <div class="row">
-          <img 
-            :src="`/${project.iPadImage.url}`" 
-            :alt="project.iPadImage.alt"
-            class="iPad-image">
-        </div>
-
-
         <!-- <div class="project-links">
           <a 
             :href="project.website"
@@ -56,6 +48,17 @@
             View Code
           </a>
         </div> -->
+      </div>
+    </section>
+
+    <section>
+      <div class="content gallery">
+        <img 
+          v-for="(image, index) in project.images"
+          :key="index"
+          :src="`/${image.url}`" 
+          :alt="image.alt"
+          class="gallery-image">
       </div>
     </section>
     
@@ -110,12 +113,13 @@ img {
   z-index: 0;
 }
 
-.header-image {
+video {
+  width: 100%;
   transform: translateY(-50px);
 }
 
 .section-padding {
-  padding: 0 0 80px 0;
+  padding: 0 0 150px 0;
 }
 
 .project-description {
@@ -136,9 +140,12 @@ ul {
   list-style-position: inside;
 }
 
-.iPad-image {
-  border-radius: 12px;
-  border: 10px solid var(--black);
+.gallery {
+  transform: translateY(-100px);
+}
+
+.gallery-image:not(:first-of-type) {
+  margin-top: 32px;
 }
 
 /* .project-links {

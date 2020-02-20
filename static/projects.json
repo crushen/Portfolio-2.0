@@ -7,6 +7,25 @@
       "url": "meahe-logo.png",
       "alt": "Meahė Design logo on an orange background" 
     },
+    "video": "meahe-vid.mp4",
+    "images": [
+      {
+        "url": "meahe-ipad.png",
+        "alt": "A screen shot of Meahė's home page."
+      },
+      {
+        "url": "meahe-screenshot-2.png",
+        "alt": "A screen shot of Meahė's website about page."
+      },
+      {
+        "url": "meahe-screenshot.png",
+        "alt": "A screen shot of one of Meahė's project pages."
+      },
+      {
+        "url": "meahe-screenshot-3.png",
+        "alt": "A screen shot of some project information on one of Meahė's project pages."
+      }
+    ],
     "stack": [
       "HTML",
       "CSS",
@@ -15,10 +34,6 @@
       "GraphQL",
       "GraphCMS"
     ],
-    "iPadImage": {
-      "url": "meahe-ipad.png",
-      "alt": "A screen shot of Meahė's website on iPad"
-    },
     "website": "http://meahe.design/",
     "github": "https://github.com/crushen/Meahe-Design",
     "slug": "meahe-design"
