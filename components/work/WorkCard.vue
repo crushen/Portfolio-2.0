@@ -79,7 +79,7 @@ h3 {
 @media screen and (min-width: 1100px) {
   .card {
     height: 400px;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
   }
 }
 </style>
