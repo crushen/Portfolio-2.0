@@ -33,7 +33,7 @@ html {
   font-size: 16px;
   background: var(--black);
   color: var(--white);
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -58,7 +58,7 @@ html {
 }
 
 p, a, li {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 24px;
   font-weight: 600;
 }
@@ -73,7 +73,7 @@ h2, h3 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .logo {
@@ -102,7 +102,7 @@ h3 {
 }
 
 .page-sub-title {
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: 800;
   color: var(--grey);
   margin-bottom: 16px;

@@ -44,7 +44,7 @@
 
 h2 {
   color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 16px;
 }
 

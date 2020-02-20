@@ -119,6 +119,7 @@ nav {
 nav a {
   font-size: 20px;
   line-height: 50px;
+  font-weight: 700;
 }
 
 nav .nuxt-link-exact-active {
