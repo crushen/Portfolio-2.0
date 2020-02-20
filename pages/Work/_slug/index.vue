@@ -16,11 +16,12 @@
           Your browser does not support the video tag.
         </video>
         <div class="row">
-          <h3>Detail</h3>
+          <h3>Overview</h3>
           <div class="text">
             <p>{{ project.description }}</p>
           </div>
         </div>
+
         <div class="row">
           <h3>Stack</h3>
           <div class="text">
@@ -35,19 +36,29 @@
           </div>
         </div>
 
-        <!-- <div class="project-links">
-          <a 
-            :href="project.website"
-            target="_blank">
-            View Project
-          </a>
-          <a 
-            v-if="project.github" 
-            :href="project.github"
-            target="_blank">
-            View Code
-          </a>
-        </div> -->
+        <div class="row">
+          <h3>Links</h3>
+          <div class="text project-links">
+            <p>
+              <strong>Website: </strong>
+              <a 
+                :href="project.website"
+                target="_blank">
+                {{ project.website }}
+              </a>
+            </p>
+            <div>
+              <p v-if="project.github">
+                <strong>Github Repo: </strong> 
+                <a 
+                  :href="project.website"
+                  target="_blank">
+                  {{ project.github }}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -61,7 +72,6 @@
           class="gallery-image">
       </div>
     </section>
-    
   </div>
 </template>
 
@@ -148,26 +158,19 @@ ul {
   margin-top: 32px;
 }
 
-/* .project-links {
+.project-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  word-break: break-all;
 }
 
 .project-links a {
-  width: 130px;
-  background: var(--dark-grey);
-  color: var(--white);
-  padding: 10px;
-  opacity: 0.5;
-  transition: 0.3s;
+  text-decoration: underline;
 }
 
-.project-links a:not(:first-of-type) {
-  margin-top: 16px;
+.project-links p:first-of-type {
+  margin-bottom: 8px;
 }
 
-.project-links a:hover {
-  opacity: 1;
-} */
 </style>
