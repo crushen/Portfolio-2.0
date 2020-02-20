@@ -9,10 +9,12 @@
       </div>
     </section>
 
-    <img :src="`/${project.thumbnail.url}`" :alt="project.thumbnail.alt">
-
     <section class="project-description section-padding">
       <div class="content">
+        <img 
+          :src="`/${project.thumbnail.url}`" 
+          :alt="project.thumbnail.alt"
+          class="header-image">
         <div class="row">
           <h3>Detail</h3>
           <div class="text">
@@ -32,6 +34,28 @@
             </ul>
           </div>
         </div>
+
+        <div class="row">
+          <img 
+            :src="`/${project.iPadImage.url}`" 
+            :alt="project.iPadImage.alt"
+            class="iPad-image">
+        </div>
+
+
+        <!-- <div class="project-links">
+          <a 
+            :href="project.website"
+            target="_blank">
+            View Project
+          </a>
+          <a 
+            v-if="project.github" 
+            :href="project.github"
+            target="_blank">
+            View Code
+          </a>
+        </div> -->
       </div>
     </section>
     
@@ -70,7 +94,7 @@ export default {
 
 <style scoped>
 .project-title {
-  height: 70vh;
+  height: 80vh;
   max-width: 1180px;
   display: flex;
   flex-direction: column;
@@ -80,10 +104,18 @@ export default {
 }
 
 img {
+  display: block;
   width: 100%;
-  transform: translateY(10px);
   position: relative;
   z-index: 0;
+}
+
+.header-image {
+  transform: translateY(-50px);
+}
+
+.section-padding {
+  padding: 0 0 80px 0;
 }
 
 .project-description {
@@ -92,7 +124,6 @@ img {
 }
 
 h3 {
-  font-size: 20px;
   color: var(--black);
   margin-bottom: 16px;
 }
@@ -105,8 +136,31 @@ ul {
   list-style-position: inside;
 }
 
-li {
-  font-size: 14px;
-  line-height: 24px;
+.iPad-image {
+  border-radius: 12px;
+  border: 10px solid var(--black);
 }
+
+/* .project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-links a {
+  width: 130px;
+  background: var(--dark-grey);
+  color: var(--white);
+  padding: 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.project-links a:not(:first-of-type) {
+  margin-top: 16px;
+}
+
+.project-links a:hover {
+  opacity: 1;
+} */
 </style>

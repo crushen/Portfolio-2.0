@@ -15,6 +15,12 @@
       "GraphQL",
       "GraphCMS"
     ],
+    "iPadImage": {
+      "url": "meahe-ipad.png",
+      "alt": "A screen shot of Meahė's website on iPad"
+    },
+    "website": "http://meahe.design/",
+    "github": "https://github.com/crushen/Meahe-Design",
     "slug": "meahe-design"
   },
   {
