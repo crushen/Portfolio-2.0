@@ -71,12 +71,8 @@ h3 {
 
 @media screen and (min-width: 600px) {
   .card {
-    margin-top: 0px;
+    margin: 0 0 32px 0;
     height: 40vw;
-  }
-
-  .card:not(:last-of-type) {
-    margin-bottom: 32px;
   }
 }
 
