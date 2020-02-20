@@ -29,7 +29,7 @@ export default {
 }
 
 html {
-  font-family: 'Alata', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Muli', 'Alata', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   background: var(--black);
   color: var(--white);
@@ -60,11 +60,16 @@ html {
 p, a {
   font-size: 14px;
   line-height: 24px;
+  font-weight: 600;
 }
 
 a {
   text-decoration: none;
   color: var(--dark-grey);
+}
+
+h2, h3 {
+ font-weight: 800;
 }
 
 h3 {
@@ -73,7 +78,7 @@ h3 {
 
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .title {
@@ -87,6 +92,7 @@ h3 {
 
 .sub-title {
   font-size: 18px;
+  font-weight: 800;
   color: var(--grey);
   margin-top: 4px;
 }
@@ -97,6 +103,7 @@ h3 {
 
 .page-sub-title {
   font-size: 4vw;
+  font-weight: 800;
   color: var(--grey);
   margin-bottom: 16px;
 }
