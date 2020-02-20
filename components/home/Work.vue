@@ -3,7 +3,7 @@
     <div class="content">
       <div class="title-container">
         <h2 class="title">Work</h2>
-        <p class="sub-title">See all</p>
+        <nuxt-link to="/work" class="sub-title">See all</nuxt-link>
       </div>
 
       <div class="cards-container">
