@@ -57,7 +57,7 @@ html {
   background: transparent;
 }
 
-p, a {
+p, a, li {
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
@@ -122,7 +122,7 @@ h3 {
   .logo {
     font-size: 22px;
   }
-  
+
   .title {
     font-size: 40px;
   }
