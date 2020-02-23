@@ -104,6 +104,24 @@ export default {
   padding-top: 100px;
 }
 
+.section-padding {
+  padding: 0 0 150px 0;
+}
+
+.project-description {
+  background: var(--off-white);
+  color: var(--dark-grey);
+}
+
+h3 {
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.row:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
 img {
   display: block;
   width: 100%;
@@ -146,45 +164,12 @@ li {
   display: block;
 }
 
-.section-padding {
-  padding: 0 0 150px 0;
-}
-
-.project-description {
-  background: var(--off-white);
-  color: var(--dark-grey);
-}
-
-h3 {
-  color: var(--black);
-  margin-bottom: 16px;
-}
-
-.row:not(:last-of-type) {
-  margin-bottom: 32px;
-}
-
 .gallery {
   transform: translateY(-100px);
 }
 
 .gallery-image:not(:first-of-type) {
   margin-top: 32px;
-}
-
-.project-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  word-break: break-all;
-}
-
-.project-links a {
-  text-decoration: underline;
-}
-
-.project-links p:first-of-type {
-  margin-bottom: 8px;
 }
 
 </style>
