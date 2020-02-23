@@ -16,35 +16,36 @@
           Your browser does not support the video tag.
         </video>
 
-        <div class="row">
-          <p class="year">{{ project.year }}</p>
-          <ul>
-            <li
-              v-for="li in project.stack"
-              :key="li">
-              {{ li }}
-            </li>
-          </ul>
-        </div>
-
-        <div class="row">
-          <!-- <h3>Overview</h3> -->
-          <div class="text">
-            <p v-html="project.description"></p>
+        <div class="description-text">
+          <div class="row">
+            <p class="year">{{ project.year }}</p>
+            <ul>
+              <li
+                v-for="li in project.stack"
+                :key="li">
+                {{ li }}
+              </li>
+            </ul>
           </div>
 
-          <div class="links">
-            <a 
-              :href="project.website"
-              target="_blank">
-              See the website
-            </a>
-            <a 
-              v-if="project.github"
-              :href="project.github"
-              target="_blank">
-              See the code
-            </a>
+          <div class="row">
+            <div class="text">
+              <p v-html="project.description"></p>
+            </div>
+
+            <div class="links">
+              <a 
+                :href="project.website"
+                target="_blank">
+                See the website
+              </a>
+              <a 
+                v-if="project.github"
+                :href="project.github"
+                target="_blank">
+                See the code
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -171,5 +172,30 @@ li {
 .gallery-image:not(:first-of-type) {
   margin-top: 32px;
 }
+
+@media screen and (min-width: 600px) {
+  video {
+    max-width: 850px;
+    margin: auto;
+    transform: translateY(-100px);
+  }
+
+  .description-text {
+    width: 75%;
+    max-width: 850px;
+    margin: 0 auto 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .gallery {
+    width: 75%;
+    max-width: 850px;
+    margin: auto;
+    transform: translateY(-150px);
+  }
+}
+
+@media screen and (min-width: 1100px) {}
 
 </style>
