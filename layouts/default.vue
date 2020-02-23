@@ -114,7 +114,7 @@ h3 {
 
 .content {
   width: 85%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
 }
 
