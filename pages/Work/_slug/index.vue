@@ -15,48 +15,36 @@
           <source :src="`/${project.video}`" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+
         <div class="row">
-          <h3>Overview</h3>
-          <div class="text">
-            <p>{{ project.description }}</p>
-          </div>
+          <p class="year">{{ project.year }}</p>
+          <ul>
+            <li
+              v-for="li in project.stack"
+              :key="li">
+              {{ li }}
+            </li>
+          </ul>
         </div>
 
         <div class="row">
-          <h3>Stack</h3>
+          <!-- <h3>Overview</h3> -->
           <div class="text">
-            <p>In this project I used:</p>
-            <ul>
-              <li
-                v-for="li in project.stack"
-                :key="li">
-                {{ li }}
-              </li>
-            </ul>
+            <p v-html="project.description"></p>
           </div>
-        </div>
 
-        <div class="row">
-          <h3>Links</h3>
-          <div class="text project-links">
-            <p>
-              <strong>Website: </strong>
-              <a 
-                :href="project.website"
-                target="_blank">
-                {{ project.website }}
-              </a>
-            </p>
-            <div>
-              <p v-if="project.github">
-                <strong>Github Repo: </strong> 
-                <a 
-                  :href="project.website"
-                  target="_blank">
-                  {{ project.github }}
-                </a>
-              </p>
-            </div>
+          <div class="links">
+            <a 
+              :href="project.website"
+              target="_blank">
+              See the website
+            </a>
+            <a 
+              v-if="project.github"
+              :href="project.github"
+              target="_blank">
+              See the code
+            </a>
           </div>
         </div>
       </div>
@@ -128,6 +116,36 @@ video {
   transform: translateY(-50px);
 }
 
+.year {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+ul {
+  list-style-position: inside;
+  list-style: none;
+  margin-top: 16px;
+  border-left: 1px solid var(--dark-grey);
+  padding-left: 8px;
+}
+
+li {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text p {
+  font-size: 17px;
+}
+
+.links {
+  margin-top: 32px;
+}
+
+.links a {
+  display: block;
+}
+
 .section-padding {
   padding: 0 0 150px 0;
 }
@@ -143,11 +161,7 @@ h3 {
 }
 
 .row:not(:last-of-type) {
-  margin-bottom: 50px;
-}
-
-ul {
-  list-style-position: inside;
+  margin-bottom: 32px;
 }
 
 .gallery {
