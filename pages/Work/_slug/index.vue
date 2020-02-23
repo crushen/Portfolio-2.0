@@ -11,10 +11,12 @@
 
     <section class="project-description section-padding">
       <div class="content">
-        <video autoplay loop class="header-image">
-          <source :src="`/${project.video}`" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-container">
+          <video autoplay loop class="header-image">
+            <source :src="`/${project.video}`" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <div class="description-text">
           <div class="row">
@@ -32,7 +34,6 @@
             <div class="text">
               <p v-html="project.description"></p>
             </div>
-
             <div class="links">
               <a 
                 :href="project.website"
@@ -51,7 +52,7 @@
       </div>
     </section>
 
-    <section>
+    <section v-if="innerWidth < 1100">
       <div class="content gallery">
         <img 
           v-for="(image, index) in project.images"
@@ -59,6 +60,27 @@
           :src="`/${image.url}`" 
           :alt="image.alt"
           class="gallery-image">
+      </div>
+    </section>
+
+    <section v-else>
+      <div class="content desktop-gallery">
+          <div class="gallery-col">
+            <img 
+              :src="`/${project.images[0].url}`" 
+              :alt="project.images[0].alt">
+            <img 
+              :src="`/${project.images[3].url}`" 
+              :alt="project.images[3].alt">
+          </div>
+          <div class="gallery-col">
+            <img 
+              :src="`/${project.images[1].url}`" 
+              :alt="project.images[1].alt">
+            <img 
+              :src="`/${project.images[2].url}`" 
+              :alt="project.images[2].alt">
+          </div>
       </div>
     </section>
   </div>
@@ -82,7 +104,8 @@ export default {
   },
   data() {
     return {
-      slug: this.$route.params.slug
+      slug: this.$route.params.slug,
+      innerWidth: null
     }
   },
   computed: {
@@ -90,6 +113,12 @@ export default {
     project() {
       return this.data.find(item => item.slug === this.slug);
     }
+  },
+  mounted() {
+    this.innerWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth;
+    });
   }
 }
 </script>
@@ -130,9 +159,12 @@ img {
   z-index: 0;
 }
 
+.video-container {
+  transform: translateY(-50px);
+}
+
 video {
   width: 100%;
-  transform: translateY(-50px);
 }
 
 .year {
@@ -174,28 +206,55 @@ li {
 }
 
 @media screen and (min-width: 600px) {
-  video {
-    max-width: 850px;
-    margin: auto;
+  .project-title {
+    padding-top: 50px;
+  }
+
+  .video-container {
     transform: translateY(-100px);
   }
 
   .description-text {
-    width: 75%;
-    max-width: 850px;
     margin: 0 auto 100px auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
 
   .gallery {
-    width: 75%;
-    max-width: 850px;
-    margin: auto;
     transform: translateY(-150px);
   }
 }
 
-@media screen and (min-width: 1100px) {}
+@media screen and (min-width: 1100px) {
+  .project-title {
+    height: 90vh;
+    padding-top: 0;
+  }
 
+  .video-container {
+    transform: translateY(-150px);
+  }
+
+  .description-text {
+    margin: 0 auto 200px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .desktop-gallery {
+    transform: translateY(-200px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .gallery-col {
+    max-width: 48%;
+  }
+
+  .gallery-col img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
 </style>
