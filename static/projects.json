@@ -2,7 +2,8 @@
   {
     "title": "Meahė Design",
     "subTitle": "Taiwanese creative design company that's based in London.",
-    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges.",
+    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges. The brief for this website was to design and create an online space that has an organic flow, and stays true to the brands minimal aesthetic. Another goal from the brief, was that it needed to be easy to update the content for new projects added to the site.<br><br>I decided to use Vue.js for this project because of it's fast rendering and loading time. This paired with a GraphQL API makes a seamless transition between project pages. On the backend I integrated GraphCMS, which makes it really simple for the brand to manage and update their content.",
+    "year": "2019",
     "thumbnail": {
       "url": "meahe-logo.png",
       "alt": "Meahė Design logo on an orange background" 
@@ -34,7 +35,7 @@
       "GraphQL",
       "GraphCMS"
     ],
-    "website": "http://meahe.design",
+    "website": "https://meahe.design",
     "github": "https://github.com/crushen/Meahe-Design",
     "slug": "meahe-design"
   },
