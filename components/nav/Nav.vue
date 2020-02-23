@@ -23,7 +23,7 @@
         v-on-clickaway="closeNav"
         class="nav-container">
         <nav>
-          <nuxt-link to="/" @click.native="closeNav">Home</nuxt-link>
+          <nuxt-link to="/" exact @click.native="closeNav">Home</nuxt-link>
           <nuxt-link to="/work" @click.native="closeNav">Work</nuxt-link>
           <nuxt-link to="/contact" @click.native="closeNav">Contact</nuxt-link>
         </nav>
@@ -122,7 +122,7 @@ nav a {
   font-weight: 700;
 }
 
-nav .nuxt-link-exact-active {
+nav .nuxt-link-active {
   color: var(--black);
 }
 
