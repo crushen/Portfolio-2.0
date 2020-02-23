@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer">
+  <footer id="footer" :class=" $route.path === `/work/${slug}` ? 'project-footer' : 'footer' ">
     <div class="content">
       <p class="logo">charlotte rushen.</p>
         <div class="footer-content">
@@ -14,9 +14,34 @@
   </footer>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      route: this.$route,
+      slug: this.$route.params.slug
+    }
+  },
+  watch: {
+    slug(newSlug) {
+      this.updateSlug();
+    }
+  },
+  methods: {
+    updateSlug() {
+      this.slug = this.$route.params.slug;
+    }
+  }
+}
+</script>
+
 <style scoped>
-footer {
+.footer {
   padding: 80px 0 40px 0;
+}
+
+.project-footer {
+  padding: 0 0 40px 0;
 }
 
 .page-links {
@@ -42,8 +67,12 @@ p {
 }
 
 @media screen and (min-width: 600px) {
-  footer {
+  .footer {
     padding: 100px 0 50px 0;
+  }
+
+  .project-footer {
+    padding: 0 0 50px 0;
   }
 
   .logo {
