@@ -3,7 +3,6 @@
     <header>
       <div class="nav-bar">
         <nuxt-link to="/">
-          <img class="logo-circle" :src="circle" alt="">
           <p class="logo">charlotte rushen.</p>
         </nuxt-link>
         <button
@@ -35,14 +34,12 @@
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
-import circle from '@/static/circle.png';
 
 export default {
   mixins: [ clickaway ],
   data() {
     return {
-      active: false,
-      circle
+      active: false
     }
   },
   methods: {
