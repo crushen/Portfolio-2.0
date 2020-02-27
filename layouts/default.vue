@@ -39,6 +39,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -47,16 +48,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: none;
-  /* scrollbar-width: none; 
-  -ms-overflow-style: none; */
 }
-
-/* ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-  background: transparent;
-} */
 
 p, a, li {
   font-size: 15px;

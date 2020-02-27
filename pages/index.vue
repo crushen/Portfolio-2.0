@@ -20,11 +20,11 @@ export default {
     work,
     contact
   },
-  // transition: {
-  //   enterActiveClass: 'animated slideInRight faster',
-  //   leaveActiveClass: 'animated slideOutRight faster',
-  //   mode: 'out-in'
-  // },
+  transition: {
+    enterActiveClass: 'animated fadeInLeft fast',
+    leaveActiveClass: 'animated fadeOutRight fast',
+    mode: 'out-in'
+  },
   head() {
     return {
       title: 'Charlotte Rushen - Home',
