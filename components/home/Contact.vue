@@ -2,29 +2,17 @@
   <section id="contact" class="section-padding">
     <div class="content">
       <h2 class="title">Contact</h2>
-        <div class="contact-container">
-            <div class="contact">
-              <h3>General enquiries</h3>
-              <a href="mailto:charlotterushen@hotmail.com">charlotterushen@hotmail.com</a>
-            </div>
-            <div class="contact social">
-              <h3>Follow me</h3>
-              <a href="https://github.com/crushen" target="_blank">GitHub</a>
-              <a href="https://codepen.io/charlotterushen/" target="_blank">Codepen</a>
-              <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>
-              <a href="https://www.linkedin.com/in/charlotte-rushen/" target="_blank">LinkedIn</a>
-            </div>
-        </div>
+      <contact-info />
     </div>
   </section>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
+import ContactInfo from '@/components/ContactInfo';
 
-    }
+export default {
+  components: {
+    ContactInfo
   }
 }
 </script>
