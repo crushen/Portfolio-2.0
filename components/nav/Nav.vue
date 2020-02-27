@@ -23,9 +23,25 @@
         v-on-clickaway="closeNav"
         class="nav-container">
         <nav>
-          <nuxt-link to="/" exact @click.native="closeNav">Home</nuxt-link>
-          <nuxt-link to="/work" @click.native="closeNav">Work</nuxt-link>
-          <nuxt-link to="/contact" @click.native="closeNav">Contact</nuxt-link>
+          <nuxt-link 
+            to="/" 
+            exact 
+            @click.native="closeNav"
+            class="animated fadeInRight">
+            Home
+          </nuxt-link>
+          <nuxt-link 
+            to="/work" 
+            @click.native="closeNav"
+            class="animated fadeInRight">
+            Work
+          </nuxt-link>
+          <nuxt-link 
+            to="/contact" 
+            @click.native="closeNav"
+            class="animated fadeInRight">
+            Contact
+          </nuxt-link>
         </nav>
       </div>
     </transition>
@@ -45,11 +61,9 @@ export default {
   methods: {
     openNav() {
       this.active = true;
-      //document.querySelector('.nav-container').style.right = 0;
     },
     closeNav() {
       this.active = false;
-      //document.querySelector('.nav-container').style.right = '-100%';
     }
   }
 }
@@ -117,7 +131,6 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  transition: 0.5s;
   z-index: 20;
 }
 
@@ -132,6 +145,18 @@ nav a {
   font-size: 20px;
   line-height: 50px;
   font-weight: 700;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+}
+
+nav a:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+nav a:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+nav a:nth-of-type(3) {
+  animation-delay: 0.4s;
 }
 
 nav .nuxt-link-active {
