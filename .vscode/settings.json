@@ -2,5 +2,8 @@
   "cSpell.words": [
     "clickaway",
     "mixins"
+  ],
+  "cSpell.ignoreWords": [
+    "vuex"
   ]
 }
