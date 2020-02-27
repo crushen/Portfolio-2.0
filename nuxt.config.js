@@ -24,14 +24,14 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }
     ]
   },
+  router: {
+    middleware: 'pages'
+  },
   generate: {
     routes: dynamicRoutes
   },
-  plugins: [],
-  buildModules: [],
   build: {
     extend (config, ctx) {
     }
-  },
-  modules: [],
+  }
 }
