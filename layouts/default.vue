@@ -1,6 +1,7 @@
 <template>
   <div>
     <my-nav />
+    <page-header />
     <nuxt />
     <my-footer />
   </div>
@@ -8,11 +9,13 @@
 
 <script>
 import myNav from '@/components/nav/Nav';
+import pageHeader from '@/components/PageHeader';
 import myFooter from '@/components/Footer';
 
 export default {
   components: {
     myNav,
+    pageHeader,
     myFooter
   }
 }

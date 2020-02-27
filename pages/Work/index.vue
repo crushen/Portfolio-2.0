@@ -1,10 +1,10 @@
 <template>
   <section id="work">
     <div class="content">
-      <div class="work-title">
+      <!-- <div class="work-title">
         <h1 class="page-sub-title">Work</h1>
         <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
-      </div>
+      </div> -->
 
       <div class="cards-container">
         <work-card
