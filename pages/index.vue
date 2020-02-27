@@ -20,11 +20,6 @@ export default {
     work,
     contact
   },
-  transition: {
-    enterActiveClass: 'animated fadeInLeft fast',
-    leaveActiveClass: 'animated fadeOutRight fast',
-    mode: 'out-in'
-  },
   head() {
     return {
       title: 'Charlotte Rushen - Home',
