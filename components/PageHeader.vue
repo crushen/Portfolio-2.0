@@ -2,14 +2,19 @@
   <header>
     <div class="content">
       <transition name="header" mode="out-in">
-        <div v-if="page === 'index'" key="home">
+        <div v-if="page === '/'" key="home">
           <h1 class="page-sub-title">Frontend Developer</h1>
           <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
         </div>
 
-        <div v-else-if="page === 'Work'" key="work">
+        <div v-else-if="page === '/work'" key="work">
           <h1 class="page-sub-title">Work</h1>
           <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
+        </div>
+
+        <div v-else-if="page === `/work/${project.slug}`" key="project">
+          <h1 class="page-sub-title">{{ project.title }}</h1>
+          <h2 class="title page-title">{{ project.subTitle }}</h2>
         </div>
       </transition>
     </div>
@@ -20,7 +25,18 @@
 import { mapState } from 'vuex';
 
 export default {
-  computed: mapState(['page'])
+  data() {
+    return {
+      slug: this.$route.params.slug
+    }
+  },
+  computed: {
+    ...mapState(['page', 'data']),
+    project() {
+      return this.data.find(item => item.slug === this.slug);
+    }
+    // Maybe watch route and then update slug on route change? Need to change footer too
+  }
 }
 </script>
 

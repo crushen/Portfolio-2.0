@@ -1,13 +1,13 @@
 <template>
   <div>
-    <section :id="project.slug">
+    <!-- <section :id="project.slug">
       <div class="content">
         <div class="project-title">
           <h1 class="page-sub-title">{{ project.title }}</h1>
           <h2 class="title page-title">{{ project.subTitle }}</h2>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="project-description section-padding">
       <div class="content">
