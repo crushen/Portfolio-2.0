@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header>
+    <div class="nav-bar-container">
       <div class="nav-bar">
         <nuxt-link to="/">
           <p class="logo">charlotte rushen.</p>
@@ -13,7 +13,7 @@
           <div class="nav-line"></div>
         </button>
       </div>
-    </header>
+    </div>
 
     <transition 
       enter-active-class="animated slideInRight faster" 
@@ -82,7 +82,7 @@ export default {
   z-index: 5;
 }
 
-header {
+.nav-bar-container {
   position: fixed;
   width: 100%;
   padding: 10px 5%;
@@ -166,7 +166,7 @@ nav .nuxt-link-active {
 /* TABLET + */
 
 @media screen and (min-width: 600px) {
-  header {
+  .nav-bar-container {
     padding: 16px 7.5%;
   }
 }

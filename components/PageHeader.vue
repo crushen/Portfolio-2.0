@@ -1,27 +1,18 @@
 <template>
-  <header :class="{
-    'landing' : (page === 'index'),
-    'work' : (page === 'Work')}">
+  <header>
+    <div class="content">
+      <transition name="header" mode="out-in">
+        <div v-if="page === 'index'" key="home">
+          <h1 class="page-sub-title">Frontend Developer</h1>
+          <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
+        </div>
 
-    <transition-group name="header" tag="div">
-      <div 
-        key="home"
-        v-if="page === 'index'"
-        class="content">
-        <h1 class="page-sub-title">Frontend Developer</h1>
-        <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
-      </div>
-
-      <div 
-        key="work"
-        v-else-if="page === 'Work'"
-        class="content">
-        <div class="work-title">
+        <div v-else-if="page === 'Work'" key="work">
           <h1 class="page-sub-title">Work</h1>
           <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
         </div>
-      </div>
-    </transition-group>
+      </transition>
+    </div>
   </header>
 </template>
 
@@ -34,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.landing {
+header {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,28 +33,22 @@ export default {
   justify-content: center;
 }
 
-.work-title {
-  height: 70vh;
-  max-width: 1180px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-/* .header-move {
-  transition: all 0.4s ease;
-} */
-
 .header-enter-active,
 .header-leave-active {
-  transition: 0.4s;
+  transition: 0.7s;
+  transition-timing-function: cubic-bezier(0,1.15,1,.99);
 }
 
 .header-enter,
 .header-leave-to {
-  transform: scale(1.1) translateZ(0);
+  transform: translateX(20px);
   opacity: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .header-enter,
+  .header-leave-to {
+    transform: translateX(50px);
+  }
 }
 </style>
