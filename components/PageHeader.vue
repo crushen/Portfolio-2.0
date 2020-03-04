@@ -3,7 +3,7 @@
     <div class="content">
       <transition name="header" mode="out-in">
         <div v-if="page === '/'" key="home">
-          <h1 class="page-sub-title">Frontend Developer</h1>
+          <h1 class="page-sub-title">Frontend Developer jhj</h1>
           <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
         </div>
 
