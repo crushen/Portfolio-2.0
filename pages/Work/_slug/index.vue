@@ -9,7 +9,7 @@
       </div>
     </section> -->
 
-    <section class="project-description section-padding">
+    <!-- <section class="project-description section-padding">
       <div class="content">
         <div class="video-container">
           <video autoplay loop class="header-image">
@@ -82,45 +82,45 @@
               :alt="project.images[2].alt">
           </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+// import { mapState } from 'vuex';
 
-export default {
-  head() {
-    return {
-      title: `Charlotte Rushen - ${this.project.title}`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.project.subTitle
-        }
-      ]
-    }
-  },
-  data() {
-    return {
-      slug: this.$route.params.slug,
-      innerWidth: null
-    }
-  },
-  computed: {
-    ...mapState(['data']),
-    project() {
-      return this.data.find(item => item.slug === this.slug);
-    }
-  },
-  mounted() {
-    this.innerWidth = window.innerWidth;
-    window.addEventListener('resize', () => {
-      this.innerWidth = window.innerWidth;
-    });
-  }
-}
+// export default {
+//   head() {
+//     return {
+//       title: `Charlotte Rushen - ${this.project.title}`,
+//       meta: [
+//         {
+//           hid: 'description',
+//           name: 'description',
+//           content: this.project.subTitle
+//         }
+//       ]
+//     }
+//   },
+//   data() {
+//     return {
+//       slug: this.$route.params.slug,
+//       innerWidth: null
+//     }
+//   },
+//   computed: {
+//     ...mapState(['data']),
+//     project() {
+//       return this.data.find(item => item.slug === this.slug);
+//     }
+//   },
+//   mounted() {
+//     this.innerWidth = window.innerWidth;
+//     window.addEventListener('resize', () => {
+//       this.innerWidth = window.innerWidth;
+//     });
+//   }
+// }
 </script>
 
 <style scoped>
@@ -159,9 +159,9 @@ img {
   z-index: 0;
 }
 
-.video-container {
+/* .video-container {
   transform: translateY(-50px);
-}
+} */
 
 video {
   width: 100%;
