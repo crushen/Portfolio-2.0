@@ -8,7 +8,11 @@
       <transition-group 
         name="list" 
         tag="g">
-        <circle class="items circ" key="circ" cx="30" cy="570" r="80"/>
+        <circle class="items circ circ-1" key="circ-1" cy="600" r="300"/>
+        <circle class="items circ circ-2" key="circ-2" cy="200" :cx="innerWidth - 20" :r="innerWidth / 5"/>
+
+        <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
+        <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
       </transition-group>
     </svg>
 
@@ -55,7 +59,9 @@ import { mapState } from 'vuex';
 export default {
   data() {
     return {
-      slug: null
+      slug: null,
+      number: 100,
+      innerWidth: null
     }
   },
   computed: {
@@ -73,6 +79,12 @@ export default {
     if(this.$route.params.slug) {
       this.slug = this.$route.params.slug;
     }
+  },
+  mounted() {
+    this.innerWidth = window.innerWidth;
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth;
+    });
   },
   watch: {
     '$route'(route) {
@@ -95,34 +107,6 @@ header {
   justify-content: center;
 }
 
-
-svg {
-  fill: #a8dadc;
-  position: absolute;
-  z-index: 0;
-}
-
-.items,
-.list-move {
-  transition: 0.7s;
-  transition-timing-function: cubic-bezier(0,1.15,1,.99);
-}
-
-.list-leave-active {
-  position: absolute;
-}
-
-.active {
-  fill: #e63946;
-}
-
-.active .circ {
-  transform: translate3d(30px, 0, 0) scale(0.5);
-}
-
-
-
-
 .header-text {
   position: relative;
   z-index: 5;
@@ -138,6 +122,54 @@ svg {
 .header-leave-active {
   transition: 0.7s;
   transition-timing-function: cubic-bezier(0,1.15,1,.99);
+}
+
+/* SVG'S */
+svg {
+  fill: #9fa8da;
+  position: absolute;
+  z-index: 0;
+}
+
+circle, .circ-small-1 {
+  opacity: 0.5;
+}
+
+.circ-small-1 {
+  opacity: 0;
+}
+
+
+.items,
+.list-move {
+  transition: 1s;
+  /* transition-timing-function: cubic-bezier(0,1.15,1,.99); */
+}
+
+.list-leave-active {
+  position: absolute;
+}
+
+.active {
+  fill: #64b5f6;
+}
+
+.active .circ-1 {
+  transform: translate3d(200px, 200px, 0);
+}
+
+.active .circ-2 {
+  transform: scale(0.6);
+}
+
+.active .circ-small-1 {
+  transform: translate3d(80px, 0, 0);
+  opacity: 0.5;
+}
+
+.active .circ-small-2 {
+  transform: translate3d(200px, 50px, 0);
+  opacity: 0;
 }
 
 @media screen and (min-width: 600px) {
