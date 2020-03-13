@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="nav-bar-container">
+    <div class="nav-bar-container"
+      :class="{ 'with-background': lastScrollPosition > 0 }">
       <div class="nav-bar">
         <nuxt-link to="/">
           <p class="logo">charlotte rushen.</p>
@@ -55,7 +56,9 @@ export default {
   mixins: [ clickaway ],
   data() {
     return {
-      active: false
+      active: false,
+      showNavbar: true,
+      lastScrollPosition: 0
     }
   },
   methods: {
@@ -64,7 +67,21 @@ export default {
     },
     closeNav() {
       this.active = false;
+    },
+    onScroll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 10) {
+        return;
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
   }
 }
 </script>
@@ -86,9 +103,14 @@ export default {
   position: fixed;
   width: 100%;
   padding: 10px 5%;
-  background: var(--black);
+  background: transparent;
   color: var(--white);
   z-index: 10;
+  transition: 0.2s;
+}
+
+.nav-bar-container.with-background {
+  background: var(--black);
 }
 
 .nav-bar {
