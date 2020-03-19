@@ -1,7 +1,8 @@
 <template>
-  <header>
+  <header :style="{ opacity: headerOpacity  }">
     <svg 
-      :class="{ 'work': (page === '/work'), 
+      :class="{ 'work': (page === '/work'),
+                'contact': (page === '/contact'),
                 'project': (page === '/work/meahe-design') }" 
       xmlns="http://www.w3.org/2000/svg"
       width="100%" 
@@ -63,7 +64,8 @@ export default {
     return {
       slug: null,
       number: 100,
-      innerWidth: null
+      innerWidth: null,
+      headerOpacity: 0
     }
   },
   computed: {
@@ -81,6 +83,9 @@ export default {
     if(this.$route.params.slug) {
       this.slug = this.$route.params.slug;
     }
+    setTimeout(() => {
+      this.headerOpacity = 1;
+    }, 500)
   },
   mounted() {
     this.innerWidth = window.innerWidth;
@@ -107,6 +112,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  transition: 1.5s;
 }
 
 .header-text {
@@ -157,6 +163,10 @@ circle, .circ-small-1 {
 
 .project {
   fill: #51CDF7;
+}
+
+.contact {
+  fill: #A89AD6;
 }
 
 .work .circ-1 {
