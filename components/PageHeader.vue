@@ -1,7 +1,8 @@
 <template>
   <header>
     <svg 
-      :class="{ 'active': (page === '/work') }" 
+      :class="{ 'work': (page === '/work'), 
+                'project': (page === '/work/meahe-design') }" 
       xmlns="http://www.w3.org/2000/svg"
       width="100%" 
       height="100%">
@@ -13,6 +14,7 @@
 
         <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
         <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
+        <circle class="items circ circ-small-3" key="circ-5" cy="300" cx="150" r="30"/>
       </transition-group>
     </svg>
 
@@ -126,19 +128,18 @@ header {
 
 /* SVG'S */
 svg {
-  fill: #9fa8da;
+  fill: #F29168;
   position: absolute;
   z-index: 0;
 }
 
 circle, .circ-small-1 {
-  opacity: 0.5;
+  opacity: 1;
 }
 
-.circ-small-1 {
+.circ-small-1, .circ-small-3 {
   opacity: 0;
 }
-
 
 .items,
 .list-move {
@@ -146,30 +147,52 @@ circle, .circ-small-1 {
   /* transition-timing-function: cubic-bezier(0,1.15,1,.99); */
 }
 
-.list-leave-active {
+.list-leave-work {
   position: absolute;
 }
 
-.active {
-  fill: #64b5f6;
+.work {
+  fill: #9AE0B2;
 }
 
-.active .circ-1 {
+.project {
+  fill: #51CDF7;
+}
+
+.work .circ-1 {
   transform: translate3d(200px, 200px, 0);
 }
 
-.active .circ-2 {
+.project .circ-1 {
+  transform: translate3d(500px, 100px, 0);
+}
+
+.work .circ-2 {
   transform: scale(0.6);
 }
 
-.active .circ-small-1 {
-  transform: translate3d(80px, 0, 0);
-  opacity: 0.5;
+.project .circ-2 {
+  transform: translate3d(-200px, -50px, 0);
 }
 
-.active .circ-small-2 {
+.work .circ-small-1 {
+  transform: translate3d(80px, 0, 0);
+  opacity: 1;
+}
+
+.work .circ-small-2 {
   transform: translate3d(200px, 50px, 0);
   opacity: 0;
+}
+
+.project .circ-small-2 {
+  transform: translate3d(200px, 50px, 0);
+  opacity: 0;
+}
+
+.project .circ-small-3 {
+  transform: scale(1.2) translate3d(-100px, -50px, 0);
+  opacity: 1;
 }
 
 @media screen and (min-width: 600px) {

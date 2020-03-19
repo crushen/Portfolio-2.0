@@ -100,7 +100,7 @@ h3 {
 .page-sub-title {
   font-size: 5vw;
   font-weight: 800;
-  color: var(--grey);
+  color: var(--white);
   margin-bottom: 16px;
 }
 

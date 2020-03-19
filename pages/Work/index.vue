@@ -1,11 +1,6 @@
 <template>
   <section id="work">
     <div class="content">
-      <!-- <div class="work-title">
-        <h1 class="page-sub-title">Work</h1>
-        <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
-      </div> -->
-
       <div class="cards-container">
         <work-card
           v-for="project in projects"
@@ -58,6 +53,16 @@ export default {
   align-items: flex-start;
   justify-content: center;
   padding-top: 100px;
+}
+
+.cards-container {
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 600px) {
+  .cards-container {
+    margin-top: 100px;
+  }
 }
 
 @media screen and (min-width: 1100px) {
