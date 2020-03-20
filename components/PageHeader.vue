@@ -216,7 +216,7 @@ svg {
 }
 
 .contact .circ-small-4 {
-  transform: translate3d(100px, -150px, 0);
+  transform: translate3d(100px, -200px, 0);
   opacity: 1;
 }
 
