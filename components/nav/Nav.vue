@@ -17,15 +17,9 @@
         </button>
         <div v-else>
           <nav>
-            <nuxt-link to="/" exact>
-              Home
-            </nuxt-link>
-            <nuxt-link to="/work">
-              Work
-            </nuxt-link>
-            <nuxt-link to="/contact">
-              Contact
-            </nuxt-link>
+            <nuxt-link to="/" exact>Home</nuxt-link>
+            <nuxt-link to="/work">Work</nuxt-link>
+            <nuxt-link to="/contact">Contact</nuxt-link>
           </nav>
         </div>
       </div>
