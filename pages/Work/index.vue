@@ -56,12 +56,12 @@ export default {
 }
 
 .cards-container {
-  margin-top: 80px;
+  padding: 80px 0;
 }
 
 @media screen and (min-width: 600px) {
   .cards-container {
-    margin-top: 100px;
+    padding: 100px 0;
   }
 }
 

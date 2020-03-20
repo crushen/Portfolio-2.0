@@ -44,9 +44,14 @@
           <div 
             v-if="page === '/contact'" 
             key="contact"
-            class="header-text">
+            class="header-text contact">
             <h1 class="page-sub-title">Contact</h1>
             <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
+
+            <div class="contact-info">
+              <p>You can send me an email at <a href="mailto:hello@charlotterushen.com">hello@charlotterushen.com</a></p>
+              <p>Or you can follow me on <a href="https://github.com/crushen" target="_blank">GitHub</a>, <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>, <a href="https://codepen.io/charlotterushen" target="_blank">Codepen</a> or <a href="https://www.linkedin.com/in/charlotte-rushen" target="_blank">LinkedIn</a></p>
+            </div>
           </div>
           <div 
             v-if="page === '/work/meahe-design'" 
@@ -151,6 +156,30 @@ header {
   transition-timing-function: cubic-bezier(0,1.15,1,.99);
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 32px 0 0 0;
+}
+
+.contact-info p {
+  color: var(--light-grey);
+}
+
+.contact-info a {
+  color: var(--white);
+}
+
+.contact-info a, .contact-info p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.contact-info p:first-of-type {
+  margin-bottom: 20px;
+}
+
 /* SVG'S */
 svg {
   fill: var(--orange);
@@ -242,6 +271,15 @@ svg {
   .header-enter,
   .header-leave-to {
     transform: translateX(50px);
+  }
+
+  .contact-info a, .contact-info p {
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  .contact-info p:first-of-type {
+    margin-bottom: 20px;
   }
 }
 </style>
