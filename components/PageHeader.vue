@@ -16,6 +16,7 @@
         <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
         <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
         <circle class="items circ circ-small-3" key="circ-5" cy="300" cx="150" r="30"/>
+        <circle class="items circ circ-small-4" key="circ-6" cy="900" cx="150" r="30"/>
       </transition-group>
     </svg>
 
@@ -139,11 +140,7 @@ svg {
   z-index: 0;
 }
 
-circle, .circ-small-1 {
-  opacity: 1;
-}
-
-.circ-small-1, .circ-small-3 {
+.circ-small-1, .circ-small-3, .circ-small-4 {
   opacity: 0;
 }
 
@@ -177,12 +174,20 @@ circle, .circ-small-1 {
   transform: translate3d(500px, 100px, 0);
 }
 
+.contact .circ-1 {
+  transform: translate3d(450px, -500px, 0) scale(0.9);
+}
+
 .work .circ-2 {
   transform: scale(0.6);
 }
 
 .project .circ-2 {
   transform: translate3d(-200px, -50px, 0);
+}
+
+.contact .circ-2 {
+  transform: translate3d(-200px, 300px, 0);
 }
 
 .work .circ-small-1 {
@@ -200,8 +205,18 @@ circle, .circ-small-1 {
   opacity: 0;
 }
 
+.contact .circ-small-2 {
+  transform: translate3d(200px, 50px, 0);
+  opacity: 0;
+}
+
 .project .circ-small-3 {
   transform: scale(1.2) translate3d(-100px, -50px, 0);
+  opacity: 1;
+}
+
+.contact .circ-small-4 {
+  transform: translate3d(100px, -150px, 0);
   opacity: 1;
 }
 
