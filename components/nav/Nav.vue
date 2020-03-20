@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="nav-bar-container"
-      :class="{ 'with-background': lastScrollPosition > 0 }">
+      :class="{ 'with-background': lastScrollPosition > 0 }"
+      :style="nav">
       <div class="nav-bar">
         <nuxt-link to="/">
           <p class="logo">charlotte rushen.</p>
@@ -56,6 +57,10 @@ export default {
   mixins: [ clickaway ],
   data() {
     return {
+      nav: {
+        opacity: 0,
+        transform: 'translateY(-50px)'
+      },
       active: false,
       showNavbar: true,
       lastScrollPosition: 0
@@ -82,6 +87,10 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll);
+    setTimeout(() => {
+      this.nav.opacity = 1;
+      this.nav.transform = 'translateY(0)';
+    }, 2500)
   }
 }
 </script>
@@ -106,7 +115,7 @@ export default {
   background: transparent;
   color: var(--white);
   z-index: 10;
-  transition: 0.2s;
+  transition: 0.6s;
 }
 
 .nav-bar-container.with-background {

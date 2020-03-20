@@ -14,6 +14,7 @@
   align-items: center;
 
   animation: rainbow 0.8s linear infinite;
+  transition: 0.6s;
 }
 
 p {

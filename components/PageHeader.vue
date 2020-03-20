@@ -1,72 +1,87 @@
 <template>
-  <header :style="{ opacity: headerOpacity  }">
-    <svg 
-      :class="{ 'work': (page === '/work'),
-                'contact': (page === '/contact'),
-                'project': (page === '/work/meahe-design') }" 
-      xmlns="http://www.w3.org/2000/svg"
-      width="100%" 
-      height="100%">
-      <transition-group 
-        name="list" 
-        tag="g">
-        <circle class="items circ circ-1" key="circ-1" cy="600" r="300"/>
-        <circle class="items circ circ-2" key="circ-2" cy="200" :cx="innerWidth - 20" :r="innerWidth / 5"/>
+  <div>
+    <page-loader :style="pageLoader"/>
+    
+    <header :style="header">
+      <svg 
+        :class="{ 'work': (page === '/work'),
+                  'contact': (page === '/contact'),
+                  'project': (page === '/work/meahe-design') }" 
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%" 
+        height="100%">
+        <transition-group 
+          name="list" 
+          tag="g">
+          <circle class="items circ circ-1" key="circ-1" cy="600" r="300"/>
+          <circle class="items circ circ-2" key="circ-2" cy="200" :cx="innerWidth - 20" :r="innerWidth / 5"/>
 
-        <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
-        <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
-        <circle class="items circ circ-small-3" key="circ-5" cy="300" cx="150" r="30"/>
-        <circle class="items circ circ-small-4" key="circ-6" cy="900" cx="150" r="30"/>
-      </transition-group>
-    </svg>
+          <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
+          <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
+          <circle class="items circ circ-small-3" key="circ-5" cy="300" cx="150" r="30"/>
+          <circle class="items circ circ-small-4" key="circ-6" cy="900" cx="150" r="30"/>
+        </transition-group>
+      </svg>
 
-    <div class="content">
-      <transition 
-        name="header" 
-        mode="out-in">
-        <div 
-          v-if="page === '/'" 
-          key="home"
-          class="header-text">
-          <h1 class="page-sub-title">Frontend Developer</h1>
-          <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
-        </div>
-        <div 
-          v-if="page === '/work'" 
-          key="work"
-          class="header-text">
-          <h1 class="page-sub-title">Work</h1>
-          <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
-        </div>
-        <div 
-          v-if="page === '/contact'" 
-          key="contact"
-          class="header-text">
-          <h1 class="page-sub-title">Contact</h1>
-          <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
-        </div>
-        <div 
-          v-if="page === '/work/meahe-design'" 
-          key="meahe"
-          class="header-text">
-          <h1 class="page-sub-title">Meahė Design</h1>
-          <h2 class="title page-title">Taiwanese creative design company that's based in London.</h2>
-        </div>
-      </transition>
-    </div>
-  </header>
+      <div class="content">
+        <transition 
+          name="header" 
+          mode="out-in">
+          <div 
+            v-if="page === '/'" 
+            key="home"
+            class="header-text">
+            <h1 class="page-sub-title">Frontend Developer</h1>
+            <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
+          </div>
+          <div 
+            v-if="page === '/work'" 
+            key="work"
+            class="header-text">
+            <h1 class="page-sub-title">Work</h1>
+            <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
+          </div>
+          <div 
+            v-if="page === '/contact'" 
+            key="contact"
+            class="header-text">
+            <h1 class="page-sub-title">Contact</h1>
+            <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
+          </div>
+          <div 
+            v-if="page === '/work/meahe-design'" 
+            key="meahe"
+            class="header-text">
+            <h1 class="page-sub-title">Meahė Design</h1>
+            <h2 class="title page-title">Taiwanese creative design company that's based in London.</h2>
+          </div>
+        </transition>
+      </div>
+    </header>
+  </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
+import pageLoader from '@/components/PageLoader';
 
 export default {
+  components: {
+    pageLoader
+  },
   data() {
     return {
       slug: null,
       number: 100,
       innerWidth: null,
-      headerOpacity: 0
+      header: {
+        opacity: 0,
+        transform: 'scale(1.5)'
+      },
+      pageLoader: {
+        opacity: 1,
+        transform: ''
+      }
     }
   },
   computed: {
@@ -85,8 +100,11 @@ export default {
       this.slug = this.$route.params.slug;
     }
     setTimeout(() => {
-      this.headerOpacity = 1;
-    }, 500)
+      this.header.transform = 'scale(1)';
+      this.header.opacity = 1;
+      this.pageLoader.transform = 'scale(1.5)';
+      this.pageLoader.opacity = 0;
+    }, 2500)
   },
   mounted() {
     this.innerWidth = window.innerWidth;
@@ -113,7 +131,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  transition: 1.5s;
+  transition: 0.6s;
 }
 
 .header-text {
@@ -135,7 +153,7 @@ header {
 
 /* SVG'S */
 svg {
-  fill: #F29168;
+  fill: var(--orange);
   position: absolute;
   z-index: 0;
 }
@@ -155,15 +173,15 @@ svg {
 }
 
 .work {
-  fill: #9AE0B2;
+  fill: var(--green);
 }
 
 .project {
-  fill: #51CDF7;
+  fill: var(--blue);
 }
 
 .contact {
-  fill: #A89AD6;
+  fill: var(--purple);
 }
 
 .work .circ-1 {
