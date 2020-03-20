@@ -40,6 +40,7 @@
             class="header-text">
             <h1 class="page-sub-title">Work</h1>
             <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
+            <work-cards-container />
           </div>
           <div 
             v-if="page === '/contact'" 
@@ -69,10 +70,12 @@
 <script>
 import { mapState } from 'vuex';
 import pageLoader from '@/components/PageLoader';
+import workCardsContainer from '@/components/work/WorkCardsContainer';
 
 export default {
   components: {
-    pageLoader
+    pageLoader,
+    workCardsContainer
   },
   data() {
     return {
@@ -95,23 +98,18 @@ export default {
       return this.data.find(item => item.slug === this.slug);
     }
   },
-  methods: {
-    delay(el) {
-
-    }
-  },
-  created() {
+  mounted() {
     if(this.$route.params.slug) {
       this.slug = this.$route.params.slug;
     }
+
     setTimeout(() => {
       this.header.transform = 'scale(1)';
       this.header.opacity = 1;
       this.pageLoader.transform = 'scale(1.5)';
       this.pageLoader.opacity = 0;
     }, 2500)
-  },
-  mounted() {
+
     this.innerWidth = window.innerWidth;
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth;
@@ -131,15 +129,12 @@ export default {
 
 <style scoped>
 header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  min-height: 120vh;
   transition: 0.6s;
 }
 
 .header-text {
+  padding-top: 30vh;
   position: relative;
   z-index: 5;
 }
@@ -163,17 +158,14 @@ header {
   margin: 32px 0 0 0;
 }
 
-.contact-info p {
-  color: var(--light-grey);
-}
-
 .contact-info a {
   color: var(--white);
+  border-bottom: solid white 2px;
 }
 
 .contact-info a, .contact-info p {
-  line-height: 30px;
-  font-size: 18px;
+  line-height: 32px;
+  font-size: 20px;
 }
 
 .contact-info p:first-of-type {
@@ -202,7 +194,8 @@ svg {
 }
 
 .work {
-  fill: var(--green);
+  /* fill: var(--green); */
+  fill: var(--purple);
 }
 
 .project {
@@ -210,11 +203,12 @@ svg {
 }
 
 .contact {
-  fill: var(--purple);
+  /* fill: var(--purple); */
+  fill: var(--green);
 }
 
 .work .circ-1 {
-  transform: translate3d(200px, 200px, 0);
+  transform: translate3d(200px, 200px, 0) scale(0.7);
 }
 
 .project .circ-1 {
@@ -238,7 +232,7 @@ svg {
 }
 
 .work .circ-small-1 {
-  transform: translate3d(80px, 0, 0);
+  transform: translate3d(80px, 40px, 0);
   opacity: 1;
 }
 

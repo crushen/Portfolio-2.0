@@ -1,6 +1,6 @@
 <template>
   <section id="work">
-    <div class="content">
+    <!-- <div class="content">
       <div class="cards-container">
         <work-card
           v-for="project in projects"
@@ -11,7 +11,7 @@
           :slug="project.slug">
         </work-card>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 

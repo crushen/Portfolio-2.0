@@ -31,7 +31,7 @@ export default {
   --dark-grey: #3f4047;
 
   --orange: #F29168;
-  --green: #9AE0B2;
+  --green: #75d194;
   --blue: #51CDF7;
   --purple: #A89AD6;
 }
