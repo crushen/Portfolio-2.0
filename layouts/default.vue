@@ -29,6 +29,11 @@ export default {
   --light-grey: #c7c7c9;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;
+
+  --orange: #F29168;
+  --green: #9AE0B2;
+  --blue: #51CDF7;
+  --purple: #A89AD6;
 }
 
 html {
