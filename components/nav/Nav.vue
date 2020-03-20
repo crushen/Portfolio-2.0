@@ -8,12 +8,26 @@
           <p class="logo">charlotte rushen.</p>
         </nuxt-link>
         <button
+          v-if="innerWidth < 1000"
           @click="openNav"
           class="nav-button">
           <div class="nav-line"></div>
           <div class="nav-line"></div>
           <div class="nav-line"></div>
         </button>
+        <div v-else>
+          <nav>
+            <nuxt-link to="/" exact>
+              Home
+            </nuxt-link>
+            <nuxt-link to="/work">
+              Work
+            </nuxt-link>
+            <nuxt-link to="/contact">
+              Contact
+            </nuxt-link>
+          </nav>
+        </div>
       </div>
     </div>
 
@@ -61,6 +75,7 @@ export default {
         opacity: 0,
         transform: 'translateY(-50px)'
       },
+      innerWidth: null,
       active: false,
       showNavbar: true,
       lastScrollPosition: 0
@@ -87,6 +102,10 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('resize', () => {
+      this.innerWidth = window.innerWidth;
+    });
+    this.innerWidth = window.innerWidth;
     setTimeout(() => {
       this.nav.opacity = 1;
       this.nav.transform = 'translateY(0)';
@@ -96,13 +115,6 @@ export default {
 </script>
 
 <style scoped>
-.logo-circle {
-  width: 35px;
-  position: absolute;
-  z-index: 0;
-  transform: translate(-5px, -4px);
-}
-
 .logo {
   position: relative;
   z-index: 5;
@@ -196,9 +208,22 @@ nav .nuxt-link-active {
 
 /* TABLET + */
 
-@media screen and (min-width: 600px) {
-  .nav-bar-container {
-    padding: 16px 7.5%;
+@media screen and (min-width: 1000px){
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+
+  nav a {
+    margin-left: 32px;
+    font-size: 16px;
+    color: var(--light-grey);
+  }
+
+  nav .nuxt-link-active {
+    color: var(--white);
   }
 }
 </style>
