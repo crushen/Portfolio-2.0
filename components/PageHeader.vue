@@ -31,17 +31,29 @@
             v-if="page === '/'" 
             key="home"
             class="header-text">
-            <h1 class="page-sub-title">Frontend Developer</h1>
-            <h2 class="title page-title">Website and web app development, helping brands perfect their online presence.</h2>
+            <h1 class="page-sub-title">Hello</h1>
+            <h2 class="title page-title">I'm Charlotte, <br>and I'm a frontend web developer.</h2>
+
+            <div class="page-text">
+              <p>On a typical day, you will find me crafting websites and user interfaces, and helping brands perfect their online presence.</p>
+              <p>Right now I'm mainly working with Vue, Nuxt, GraphQL, GraphCMS, HTML, CSS (SCSS) and vanilla JavaScript (ES6+).</p>
+              <p>Outside of work, I'm usually either writing music, playing video games, or obsessing over my two bundles of joy... aka my cats.</p>
+              <p>
+                If you'd like to find out more about me, you can  
+                <router-link to="/contact">get in touch</router-link> 👋🏻
+              </p>
+            </div>
           </div>
+
           <div 
             v-if="page === '/work'" 
             key="work"
             class="header-text">
             <h1 class="page-sub-title">Work</h1>
             <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
-            <work-cards-container />
+            <!-- <work-cards-container /> -->
           </div>
+
           <div 
             v-if="page === '/contact'" 
             key="contact"
@@ -49,11 +61,12 @@
             <h1 class="page-sub-title">Contact</h1>
             <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
 
-            <div class="contact-info">
+            <div class="page-text">
               <p>You can send me an email at <a href="mailto:hello@charlotterushen.com">hello@charlotterushen.com</a></p>
-              <p>Or you can follow me on <a href="https://github.com/crushen" target="_blank">GitHub</a>, <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>, <a href="https://codepen.io/charlotterushen" target="_blank">Codepen</a> or <a href="https://www.linkedin.com/in/charlotte-rushen" target="_blank">LinkedIn</a></p>
+              <p>Or you can follow me on <a href="https://github.com/crushen" target="_blank">GitHub</a>, <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>, <a href="https://codepen.io/charlotterushen" target="_blank">Codepen</a> or <a href="https://www.linkedin.com/in/charlotte-rushen" target="_blank">LinkedIn</a>.</p>
             </div>
           </div>
+
           <div 
             v-if="page === '/work/meahe-design'" 
             key="meahe"
@@ -129,12 +142,12 @@ export default {
 
 <style scoped>
 header {
-  min-height: 120vh;
+  min-height: 100vh;
   transition: 0.6s;
 }
 
 .header-text {
-  padding-top: 30vh;
+  padding-top: 160px;
   position: relative;
   z-index: 5;
 }
@@ -151,25 +164,20 @@ header {
   transition-timing-function: cubic-bezier(0,1.15,1,.99);
 }
 
-.contact-info {
+.page-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 32px 0 0 0;
 }
 
-.contact-info a {
+.page-text a {
   color: var(--white);
   border-bottom: solid white 2px;
 }
 
-.contact-info a, .contact-info p {
-  line-height: 32px;
-  font-size: 20px;
-}
-
-.contact-info p:first-of-type {
-  margin-bottom: 20px;
+.page-text p {
+  margin-bottom: 32px;
 }
 
 /* SVG'S */
@@ -262,17 +270,27 @@ svg {
 }
 
 @media screen and (min-width: 600px) {
+  .content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-text {
+    padding-top: 50px;
+  }
+
   .header-enter,
   .header-leave-to {
     transform: translateX(50px);
   }
 
-  .contact-info a, .contact-info p {
+  .page-text a, .page-text p {
     line-height: 30px;
     font-size: 22px;
   }
 
-  .contact-info p:first-of-type {
+  .page-text p:first-of-type {
     margin-bottom: 20px;
   }
 }

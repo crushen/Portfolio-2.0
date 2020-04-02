@@ -59,8 +59,10 @@ html {
 }
 
 p, a, li {
-  font-size: 15px;
-  line-height: 24px;
+  /* font-size: 15px;
+  line-height: 24px; */
+  line-height: 32px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -115,7 +117,7 @@ h3 {
 
 .content {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -160,9 +162,9 @@ h3 {
 
 @media screen and (min-width: 1200px) {
   .page-title {
-    font-size: 70px;
-    line-height: 100px;
-    max-width: 1200px;
+    /* font-size: 70px;
+    line-height: 100px; */
+    max-width: 1300px;
   }
 }
 </style>
