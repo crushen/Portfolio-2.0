@@ -63,12 +63,13 @@ p, a, li {
   line-height: 24px; */
   line-height: 32px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 a {
+  color: var(--white);
   text-decoration: none;
-  color: var(--dark-grey);
+  font-weight: 800;
 }
 
 h2, h3 {

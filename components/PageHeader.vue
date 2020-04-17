@@ -31,16 +31,15 @@
             v-if="page === '/'" 
             key="home"
             class="header-text">
-            <h1 class="page-sub-title">Hello</h1>
+            <h1 class="page-sub-title">Hello!</h1>
             <h2 class="title page-title">I'm Charlotte, <br>and I'm a frontend web developer.</h2>
 
             <div class="page-text">
-              <p>On a typical day, you will find me crafting websites and user interfaces, and helping brands perfect their online presence.</p>
-              <p>Right now I'm mainly working with Vue, Nuxt, GraphQL, GraphCMS, HTML, CSS (SCSS) and vanilla JavaScript (ES6+).</p>
-              <p>Outside of work, I'm usually either writing music, playing video games, or obsessing over my two bundles of joy... aka my cats.</p>
+              <p>On a typical day you'll find me crafting websites and user interfaces, helping brands perfect their online presence.</p>
+              <p>Right now I'm mainly working with Vue, Nuxt, HTML, CSS (SCSS) and vanilla JavaScript (ES6+).</p>
               <p>
-                If you'd like to find out more about me, you can  
-                <router-link to="/contact">get in touch</router-link> 👋🏻
+                If you'd like to find out more about me, please  
+                <nuxt-link to="/contact">get in touch</nuxt-link> - I'd love to hear from you! 👋🏻
               </p>
             </div>
           </div>
@@ -51,7 +50,7 @@
             class="header-text">
             <h1 class="page-sub-title">Work</h1>
             <h2 class="title page-title">Take a look at some of projects I've been working on recently.</h2>
-            <!-- <work-cards-container /> -->
+            <work-list />
           </div>
 
           <div 
@@ -62,7 +61,7 @@
             <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
 
             <div class="page-text">
-              <p>You can send me an email at <a href="mailto:hello@charlotterushen.com">hello@charlotterushen.com</a></p>
+              <p>You can send me an email at <a href="mailto:hello@charlotterushen.com">hello@charlotterushen.com</a>.</p>
               <p>Or you can follow me on <a href="https://github.com/crushen" target="_blank">GitHub</a>, <a href="https://twitter.com/charlotterushen" target="_blank">Twitter</a>, <a href="https://codepen.io/charlotterushen" target="_blank">Codepen</a> or <a href="https://www.linkedin.com/in/charlotte-rushen" target="_blank">LinkedIn</a>.</p>
             </div>
           </div>
@@ -72,7 +71,7 @@
             key="meahe"
             class="header-text">
             <h1 class="page-sub-title">Meahė Design</h1>
-            <h2 class="title page-title">Taiwanese creative design company that's based in London.</h2>
+            <h2 class="title page-title">Taiwanese creative design company based in London.</h2>
           </div>
         </transition>
       </div>
@@ -83,12 +82,12 @@
 <script>
 import { mapState } from 'vuex';
 import pageLoader from '@/components/PageLoader';
-import workCardsContainer from '@/components/work/WorkCardsContainer';
+import workList from '@/components/work/WorkList';
 
 export default {
   components: {
     pageLoader,
-    workCardsContainer
+    workList
   },
   data() {
     return {
@@ -171,11 +170,6 @@ header {
   margin: 32px 0 0 0;
 }
 
-.page-text a {
-  color: var(--white);
-  border-bottom: solid white 2px;
-}
-
 .page-text p {
   margin-bottom: 32px;
 }
@@ -194,7 +188,6 @@ svg {
 .items,
 .list-move {
   transition: 1s;
-  /* transition-timing-function: cubic-bezier(0,1.15,1,.99); */
 }
 
 .list-leave-work {
@@ -202,7 +195,6 @@ svg {
 }
 
 .work {
-  /* fill: var(--green); */
   fill: var(--purple);
 }
 
@@ -211,7 +203,6 @@ svg {
 }
 
 .contact {
-  /* fill: var(--purple); */
   fill: var(--green);
 }
 
@@ -270,14 +261,8 @@ svg {
 }
 
 @media screen and (min-width: 600px) {
-  .content {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-
   .header-text {
-    padding-top: 50px;
+    padding-top: 260px;
   }
 
   .header-enter,
