@@ -2,7 +2,7 @@ import projects from '../static/projects.json';
 
 export const state = () => ({
   page: 'index',
-  data: projects
+  projects: projects
 })
 
 export const mutations = {

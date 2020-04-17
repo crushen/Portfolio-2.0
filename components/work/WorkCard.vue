@@ -55,8 +55,8 @@ h3 {
 .text {
   min-height: 120px;
   height: 30%;
-  background: var(--off-white);
-  color: var(--black);
+  background: var(--black);
+  color: var(--off-white);
   padding: 0 5%;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ h3 {
 }
 
 .text p {
-  color: var(--dark-grey);
+  color: var(--off-white);
 }
 
 @media screen and (min-width: 600px) {
