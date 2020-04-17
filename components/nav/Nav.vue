@@ -132,7 +132,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
