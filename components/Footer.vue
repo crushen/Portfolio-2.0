@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 80px 0 40px 0;
+  padding: 40px 0;
 }
 
 .project-footer {
@@ -54,6 +54,7 @@ export default {
 a, p {
   color: var(--grey);
   line-height: 30px;
+  font-size: 15px;
 }
 
 p {
