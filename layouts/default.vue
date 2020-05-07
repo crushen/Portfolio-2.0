@@ -122,17 +122,6 @@ h3 {
   margin: auto;
 }
 
-.page-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 32px 0 0 0;
-}
-
-.page-text p {
-  margin-bottom: 32px;
-}
-
 @media screen and (min-width: 600px) {
   .logo {
     font-size: 22px;
