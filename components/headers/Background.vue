@@ -3,14 +3,12 @@
     :class="{ 'work': (page === '/work'),
               'contact': (page === '/contact'),
               'project': (page === '/work/meahe-design') }" 
-    xmlns="http://www.w3.org/2000/svg"
-    width="100%" 
-    height="100%">
+    xmlns="http://www.w3.org/2000/svg">
     <transition-group 
       name="list" 
       tag="g">
-      <circle class="items circ circ-1" key="circ-1" cy="600" r="300"/>
-      <circle class="items circ circ-2" key="circ-2" cy="200" :cx="innerWidth - 20" :r="innerWidth / 5"/>
+      <circle class="items circ circ-1" key="circ-1" cy="500" r="300"/>
+      <circle class="items circ circ-2" key="circ-2" cy="200" :cx="innerWidth - 20" :r="innerWidth / 6"/>
 
       <circle class="items circ circ-small-1" key="circ-3" cy="200" cx="200" r="30"/>
       <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="450" r="30"/>
@@ -39,6 +37,8 @@ export default {
 
 <style scoped>
 svg {
+  width: 100%;
+  height: 850px;
   fill: var(--orange);
   position: absolute;
   z-index: 0;
@@ -78,7 +78,7 @@ svg {
 }
 
 .contact .circ-1 {
-  transform: translate3d(450px, -500px, 0) scale(0.9);
+  transform: translate3d(450px, -400px, 0) scale(0.9);
 }
 
 .work .circ-2 {

@@ -1,12 +1,9 @@
 <template>
   <div>
-    <page-loader :style="pageLoader"/>
-    
-    <header :style="header">
+    <header>
+      <background class="background" :page="page" :style="fadeIn"/>
 
-      <background :page="page" />
-
-      <div class="content">
+      <div class="content" :style="scaleIn">
         <transition 
           name="header" 
           mode="out-in">
@@ -24,7 +21,6 @@
 
 <script>
 import { mapState } from 'vuex';
-import pageLoader from '@/components/PageLoader';
 import background from '@/components/headers/Background';
 import home from '@/components/headers/Home';
 import work from '@/components/headers/Work';
@@ -33,7 +29,6 @@ import contact from '@/components/headers/Contact';
 
 export default {
   components: {
-    pageLoader,
     background,
     home,
     work,
@@ -41,13 +36,12 @@ export default {
   },
   data() {
     return {
-      header: {
+      scaleIn: {
         opacity: 0,
         transform: 'scale(1.5)'
       },
-      pageLoader: {
-        opacity: 1,
-        transform: ''
+      fadeIn: {
+        opacity: 0,
       }
     }
   },
@@ -59,10 +53,9 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.header.transform = 'scale(1)';
-      this.header.opacity = 1;
-      this.pageLoader.transform = 'scale(1.5)';
-      this.pageLoader.opacity = 0;
+      this.scaleIn.transform = 'scale(1)';
+      this.scaleIn.opacity = 1;
+      this.fadeIn.opacity = 1;
     }, 2500)
   }
 }
@@ -72,6 +65,14 @@ export default {
 header {
   min-height: 100vh;
   transition: 0.6s;
+}
+
+.content {
+  transition: 0.6s;
+}
+
+.background {
+  transition: opacity 0.6s;
 }
 
 .header-enter,

@@ -1,20 +1,46 @@
 <template>
-  <div class="container">
-    <p class="logo">charlotte rushen.</p>
+  <div class="page-loader" :style="pageLoader">
+    <p class="logo" :style="logo">charlotte rushen.</p>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      pageLoader: {
+        background: 'var(--black)'
+      },
+      logo: {
+        opacity: 1,
+        transform: 'scale(1)'
+      }
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.logo.transform = 'scale(1.5)';
+      this.logo.opacity = 0;
+      this.pageLoader.background = 'transparent';
+    }, 2500)
+  }
+}
+</script>
+
 <style scoped>
-.container {
+.page-loader {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  animation: rainbow 0.8s linear infinite;
+  justify-content: center;
   transition: 0.6s;
+}
+
+.logo {
+  transition: 0.6s;
+  animation: rainbow 0.8s linear infinite;
 }
 
 p {

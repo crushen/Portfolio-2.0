@@ -1,22 +1,28 @@
 <template>
   <div>
+    <page-loader/>
     <my-nav />
     <page-header />
     <nuxt />
-    <my-footer />
+    <!-- <my-footer /> -->
   </div>
 </template>
 
 <script>
+import pageLoader from '@/components/PageLoader';
 import myNav from '@/components/nav/Nav';
 import pageHeader from '@/components/PageHeader';
 import myFooter from '@/components/Footer';
 
 export default {
   components: {
+    pageLoader,
     myNav,
     pageHeader,
     myFooter
+  },
+  mounted() {
+    window.scrollTo(0,0);
   }
 }
 </script>
@@ -48,6 +54,8 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 *,

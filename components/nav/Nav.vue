@@ -95,11 +95,11 @@ export default {
     }
   },
   mounted() {
+    this.innerWidth = window.innerWidth;
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', () => {
       this.innerWidth = window.innerWidth;
     });
-    this.innerWidth = window.innerWidth;
     setTimeout(() => {
       this.nav.opacity = 1;
       this.nav.transform = 'translateY(0)';
@@ -116,7 +116,7 @@ export default {
 
 .nav-bar-container {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   padding: 10px 5%;
   background: transparent;
   color: var(--white);
