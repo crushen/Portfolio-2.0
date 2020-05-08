@@ -122,6 +122,23 @@ h3 {
   margin: auto;
 }
 
+.header-text {
+  padding-top: 160px;
+  position: relative;
+  z-index: 5;
+}
+
+.page-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 32px 0 0 0;
+}
+
+.page-text p {
+  margin-bottom: 32px;
+}
+
 @media screen and (min-width: 600px) {
   .logo {
     font-size: 22px;
@@ -150,6 +167,19 @@ h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4vw;
+  }
+
+  .header-text {
+    padding-top: 260px;
+  }
+
+  .page-text a, .page-text p {
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  .page-text p:first-of-type {
+    margin-bottom: 20px;
   }
 }
 
