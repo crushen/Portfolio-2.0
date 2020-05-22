@@ -129,6 +129,7 @@ h3 {
   position: relative;
   z-index: 5;
 
+  min-height: 100vh;
   width: 85%;
   max-width: 1300px;
   margin: auto;
@@ -155,6 +156,16 @@ button.page-link {
   border: 3px solid white;
   border-radius: 100px;
   padding: 10px 24px;
+}
+
+@media screen and (min-width: 340px) {
+  .header-text {
+    padding-top: 5vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 600px) {
