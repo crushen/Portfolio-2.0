@@ -9,3 +9,16 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+
+@media screen and (min-width: 340px) {
+  .header-text {
+    padding-top: 5vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+</style>

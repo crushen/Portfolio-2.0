@@ -13,14 +13,19 @@
         class="page-link">
         View my work!
       </nuxt-link>
-      <!-- <p>
-        If you'd like to find out more about me, please  
-        <nuxt-link to="/contact">get in touch</nuxt-link> - I'd love to hear from you! 👋🏻
-      </p> -->
     </div>
   </div>
 </template>
 
 <style scoped>
 
+@media screen and (min-width: 340px) {
+  .header-text {
+    padding-top: 5vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 </style>

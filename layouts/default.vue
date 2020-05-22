@@ -127,7 +127,7 @@ h3 {
 }
 
 .header-text {
-  padding-top: 18vh;
+  padding-top: 20vh;
   position: relative;
   z-index: 5;
 }
