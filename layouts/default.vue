@@ -32,7 +32,7 @@ export default {
   --black: #3a4154;
   --white: #FFF;
   --off-white: #ededed;
-  --light-grey: #c7c7c9;
+  --light-grey: #e8e8ed;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;
 
@@ -100,7 +100,7 @@ h3 {
   /* font-family: 'Catamaran', sans-serif; */
   letter-spacing: normal;
   font-weight: 900;
-  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.6);
 }
 
 .sub-title {
@@ -115,7 +115,7 @@ h3 {
   font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
-  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.6);
 }
 
 .content {
@@ -128,6 +128,10 @@ h3 {
   padding-top: 20vh;
   position: relative;
   z-index: 5;
+
+  width: 85%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .page-text {

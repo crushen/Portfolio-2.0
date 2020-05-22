@@ -1,24 +1,29 @@
 <template>
-  <div class="header-text">
-    <h1 class="page-sub-title">Work</h1>
-    <h2 class="title page-title">Take a look at some of the projects I've been working on recently.</h2>
+  <section>
+    <section class="header-text">
+      <h1 class="page-sub-title">Work</h1>
+      <h2 class="title page-title">Take a look at some of the projects I've been working on recently.</h2>
 
-    <nuxt-link 
-      to="/contact" 
-      tag="button"
-      class="page-link">
-      Get in touch!
-    </nuxt-link>
+      <!-- <nuxt-link 
+        to="/contact" 
+        tag="button"
+        class="page-link">
+        Get in touch!
+      </nuxt-link> -->
 
-    <!-- <section class="cards">
-      <div 
-        v-for="project in projects"
-        :key="project.slug"
-        class="square">
-      </div> 
-    </section> -->
+    </section>
 
-  </div>
+    <section class="cards">
+      <ul class="grid">
+        <li 
+          v-for="project in projects"
+          :key="project.slug"
+          class="square">
+          <h3>{{ project.title }}</h3>
+        </li>
+      </ul>
+    </section>
+  </section>
 </template>
 
 <script>
@@ -38,28 +43,22 @@ export default {
 <style scoped>
 
 .header-text {
-  position: relative;
+  margin-bottom: 30vh;
 }
 
-.container {
-  position: absolute;
-  right: 0;
-  bottom: -30vh;
-}
-
-.cards {
-  margin-top: 100px;
+.grid {
+  /* border-top: 4px solid white;
+  border-bottom: 4px solid white; */
+  border: 4px solid white;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-height: 100vh;
+  grid-gap: 4px;
 }
 
 .square {
-  width: 100%;
-  height: 200px;
-  background: var(--off-white);
-  margin-top: 32px;
-  border-radius: 4px;
-
-  -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
-  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2);
+  background: var(--light-grey);
 }
 </style>
