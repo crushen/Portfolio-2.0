@@ -40,21 +40,6 @@
     "slug": "meahe-design"
   },
   {
-    "title": "Chord Progressions",
-    "subTitle": "An app that randomly generates chord progressions.",
-    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges.",
-    "thumbnail": {
-    "url": "guitar.jpg",
-    "alt": "A girl playing guitar" 
-   },
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "slug": "chord-progressions"
-  },
-  {
     "title": "Emma Kate Parkinson",
     "subTitle": "Online portfolio for a UI/UX Designer and Creative.",
     "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges.",
@@ -69,5 +54,20 @@
       "Vue.js"
     ],
     "slug": "emma-kate-parkinson"
+  },
+  {
+    "title": "Salmo",
+    "subTitle": "An app that randomly generates chord progressions.",
+    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges.",
+    "thumbnail": {
+    "url": "guitar.jpg",
+    "alt": "A girl playing guitar" 
+   },
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "slug": "chord-progressions"
   }
 ]

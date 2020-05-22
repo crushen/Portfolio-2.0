@@ -31,7 +31,7 @@ export default {
 :root {
   --black: #242529;
   --white: #FFF;
-  --off-white: #F0F0F0;
+  --off-white: #ededed;
   --light-grey: #c7c7c9;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;
@@ -69,8 +69,8 @@ html {
 p, a, li {
   /* font-size: 15px;
   line-height: 24px; */
-  line-height: 32px;
-  font-size: 20px;
+  line-height: 24px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -94,12 +94,12 @@ h3 {
 }
 
 .title {
-  font-size: 9vw;
+  font-size: 32px;
+  line-height: 40px;
   color: var(--white);
-  font-family: 'Vesper Libre', serif;
+  /* font-family: 'Catamaran', sans-serif; */
   letter-spacing: normal;
   font-weight: 900;
-  line-height: 45px;
 }
 
 .sub-title {
@@ -107,10 +107,6 @@ h3 {
   font-weight: 800;
   color: var(--grey);
   margin-top: 4px;
-}
-
-.page-title {
-  line-height: 14vw;
 }
 
 .page-sub-title {
@@ -131,7 +127,7 @@ h3 {
 }
 
 .header-text {
-  padding-top: 160px;
+  padding-top: 18vh;
   position: relative;
   z-index: 5;
 }
@@ -145,6 +141,18 @@ h3 {
 
 .page-text p {
   margin-bottom: 32px;
+}
+
+button.page-link {
+  font-family: 'Muli', 'Alata', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: white;
+  background: none;
+  border: 3px solid white;
+  border-radius: 100px;
+  padding: 10px 24px;
 }
 
 @media screen and (min-width: 600px) {
@@ -178,7 +186,7 @@ h3 {
   }
 
   .header-text {
-    padding-top: 260px;
+    /* padding-top: 260px; */
   }
 
   .page-text a, .page-text p {
