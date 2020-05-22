@@ -29,17 +29,17 @@ export default {
 
 <style>
 :root {
-  --black: #242529;
+  --black: #3a4154;
   --white: #FFF;
   --off-white: #ededed;
   --light-grey: #c7c7c9;
   --grey: #9AA0A6;
   --dark-grey: #3f4047;
 
-  --orange: #F29168;
-  --green: #75d194;
-  --blue: #51CDF7;
-  --purple: #A89AD6;
+  --orange: #FFA69E;
+  --green: #B8F2E6;
+  --blue: #9ed4db;
+  --purple: #c4a5c9;
 }
 
 html {
@@ -100,6 +100,7 @@ h3 {
   /* font-family: 'Catamaran', sans-serif; */
   letter-spacing: normal;
   font-weight: 900;
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .sub-title {
@@ -114,10 +115,7 @@ h3 {
   font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
-}
-
-.section-padding {
-  padding: 80px 0;
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -162,10 +160,6 @@ button.page-link {
 
   .title {
     font-size: 40px;
-  }
-
-  .section-padding {
-    padding: 100px 0;
   }
 
   .page-title {

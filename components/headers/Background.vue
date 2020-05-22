@@ -61,7 +61,7 @@ svg {
 }
 
 .contact {
-  fill: var(--green);
+  fill: var(--blue);
 }
 
 .work .circ-1 {
@@ -69,7 +69,7 @@ svg {
 }
 
 .contact .circ-1 {
-  transform: translate3d(-200px, 150px, 0);
+  transform: translate3d(-185px, 130px, 0) scale(0.9);
 }
 
 .work .circ-2 {
