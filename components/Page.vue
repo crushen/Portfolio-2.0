@@ -1,6 +1,6 @@
 <template>
   <section class="pages">
-    <background class="background" :page="page" :style="fadeIn"/>
+    <mobile-background class="background" :page="page" :style="fadeIn"/>
 
     <div class="page" :style="scaleIn">
       <transition name="slide" mode="out-in">
@@ -16,7 +16,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import background from '@/components/pages/Background';
+import mobileBackground from '@/components/backgrounds/MobileBackground';
 import home from '@/components/pages/Home';
 import work from '@/components/pages/Work';
 import contact from '@/components/pages/Contact';
@@ -24,7 +24,7 @@ import contact from '@/components/pages/Contact';
 
 export default {
   components: {
-    background,
+    mobileBackground,
     home,
     work,
     contact

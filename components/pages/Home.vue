@@ -1,5 +1,5 @@
 <template>
-  <div class="header-text">
+  <section class="header-text">
     <h1 class="page-sub-title">Hello.</h1>
     <h2 class="title page-title">I'm Charlotte, <br>and I'm a frontend web developer.</h2>
 
@@ -14,6 +14,5 @@
         View my work!
       </nuxt-link>
     </div>
-  </div>
+  </section>
 </template>
-
