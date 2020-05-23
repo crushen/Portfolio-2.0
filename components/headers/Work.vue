@@ -22,6 +22,14 @@
             <div class="text">
               <h3>{{ project.title }}</h3>
               <p>{{ project.subTitle }}</p>
+              <ul class="project-links">
+                <li>
+                  <a :href="project.website" target="_blank">View the website</a>
+                </li>
+                <li>
+                  <a :href="project.github" target="_blank">See the code</a>
+                </li>
+              </ul>
             </div>
           </div>
           <img :src="project.thumbnail.url">
@@ -51,7 +59,7 @@ export default {
 
 .arrow {
   width: 20px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .grid {
@@ -92,7 +100,7 @@ export default {
 
 .text {
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 50%;
   width: 80%;
   -webkit-transform: translate(-50%, -50%);
@@ -110,6 +118,21 @@ export default {
   color: var(--grey);
 }
 
+.text a {
+  color: var(--grey);
+  margin-top: 10px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-links li {
+  margin-top: 10px;
+}
+
 .card:hover img {
   opacity: 0;
 }
@@ -119,7 +142,7 @@ export default {
 }
 
 .card:hover .text {
-  top: 30%;
+  top: 50%;
 }
 
 </style>

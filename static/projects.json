@@ -1,58 +1,22 @@
 [
   {
     "title": "Meahė Design",
-    "subTitle": "Taiwanese creative design company based in London.",
-    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges. The brief for this website was to design and create an online space that has an organic flow, and stays true to the brands minimal aesthetic.<br><br>I decided to use Vue.js for this project because of it's fast rendering and loading time. This paired with a GraphQL API makes a seamless transition between project pages. On the backend I integrated GraphCMS, which makes it really simple for the brand to manage and update their content.",
-    "year": "2019",
+    "subTitle": "Website for a Taiwanese creative design company based in London. Built with Vue.js and GraphCMS.",
+    "github": "https://github.com/crushen/Meahe-Design",
     "thumbnail": {
       "url": "meahe-logo.svg",
-      "alt": "Meahė Design logo on an orange background" 
+      "alt": "Meahė Design logo." 
     },
-    "video": "meahe-vid.mp4",
-    "images": [
-      {
-        "url": "meahe-ipad.png",
-        "alt": "A screen shot of Meahė's home page."
-      },
-      {
-        "url": "meahe-screenshot-2.png",
-        "alt": "A screen shot of Meahė's website about page."
-      },
-      {
-        "url": "meahe-screenshot.png",
-        "alt": "A screen shot of one of Meahė's project pages."
-      },
-      {
-        "url": "meahe-screenshot-3.png",
-        "alt": "A screen shot of some project information on one of Meahė's project pages."
-      }
-    ],
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Vue.js",
-      "GraphQL",
-      "GraphCMS"
-    ],
-    "website": "https://meahe.design",
-    "github": "https://github.com/crushen/Meahe-Design",
-    "slug": "meahe-design"
+    "website": "https://meahe.design"
   },
   {
-    "title": "Emma Kate Parkinson",
-    "subTitle": "Online portfolio for a UI/UX Designer and Creative.",
-    "description": "Meahė Design takes pride in their immigrant heritage; their unique role in this society enables them to observe and provide unique design solutions tailored to individual challenges.",
+    "title": "Salmo Visa",
+    "subTitle": "The ultimate visa organisation tool. Built with Vue.js and Firebase.",
+    "website": "https://meahe.design",
+    "github": "https://github.com/crushen/Meahe-Design",
     "thumbnail": {
       "url": "salmo-logo.svg",
-      "alt": "Emma Kate Parkinson's logo on a black background" 
-     },
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Vue.js"
-    ],
-    "slug": "emma-kate-parkinson"
+      "alt": "Salmo's logo" 
+     }
   }
 ]

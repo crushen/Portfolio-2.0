@@ -125,10 +125,9 @@ h3 {
 }
 
 .header-text {
-  padding-top: 20vh;
+  padding: 20vh 0 10vh 0;
   position: relative;
   z-index: 5;
-
   min-height: 100vh;
   width: 85%;
   max-width: 1300px;
@@ -160,7 +159,7 @@ button.page-link {
 
 @media screen and (min-width: 340px) {
   .header-text {
-    padding-top: 5vh;
+    padding: 5vh 0 0 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
