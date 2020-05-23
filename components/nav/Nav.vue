@@ -117,7 +117,7 @@ export default {
 .nav-bar-container {
   position: fixed;
   width: 100vw;
-  padding: 10px 5%;
+  padding: 16px 7.5%;
   background: transparent;
   color: var(--white);
   z-index: 10;
@@ -156,6 +156,10 @@ export default {
 
 a {
   color: var(--white);
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* RIGHT NAV DRAWER */
@@ -213,7 +217,11 @@ nav .nuxt-link-active {
   nav a {
     margin-left: 32px;
     font-size: 16px;
-    color: var(--light-grey);
+    color: var(--grey);
+  }
+
+  nav a:hover {
+    color: var(--white);
   }
 
   nav .nuxt-link-active {
