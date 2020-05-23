@@ -165,6 +165,14 @@ export default {
   .arrow {
     margin-top: 32px;
   }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    height: 400px;
+  }
 }
 
 </style>

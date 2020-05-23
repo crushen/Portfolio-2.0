@@ -18,5 +18,25 @@
       "url": "salmo-logo.svg",
       "alt": "Salmo's logo" 
      }
+  },
+  {
+    "title": "Salmo Visa",
+    "subTitle": "The ultimate visa organisation tool. Built with Vue.js and Firebase.",
+    "website": "https://meahe.design",
+    "github": "https://github.com/crushen/Meahe-Design",
+    "thumbnail": {
+      "url": "salmo-logo.svg",
+      "alt": "Salmo's logo" 
+     }
+  },
+  {
+    "title": "Meahė Design",
+    "subTitle": "Website for a Taiwanese creative design company based in London. Built with Vue.js and GraphCMS.",
+    "github": "https://github.com/crushen/Meahe-Design",
+    "thumbnail": {
+      "url": "meahe-logo.svg",
+      "alt": "Meahė Design logo." 
+    },
+    "website": "https://meahe.design"
   }
 ]
