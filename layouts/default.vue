@@ -47,7 +47,6 @@ html {
   font-size: 16px;
   background: var(--black);
   color: var(--white);
-  /* letter-spacing: 1px; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -67,8 +66,6 @@ html {
 }
 
 p, a, li {
-  /* font-size: 15px;
-  line-height: 24px; */
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -84,12 +81,8 @@ h2, h3 {
  font-weight: 800;
 }
 
-h3 {
-  font-size: 20px;
-}
-
 .logo {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
 }
 
@@ -97,7 +90,6 @@ h3 {
   font-size: 32px;
   line-height: 40px;
   color: var(--white);
-  /* font-family: 'Catamaran', sans-serif; */
   letter-spacing: normal;
   font-weight: 900;
   text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.6);
@@ -111,7 +103,7 @@ h3 {
 }
 
 .page-sub-title {
-  font-size: 5vw;
+  font-size: 18px;
   font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
@@ -169,57 +161,60 @@ button.page-link {
 
 @media screen and (min-width: 600px) {
   .logo {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .title {
-    font-size: 40px;
+    font-size: 38px;
+    line-height: 48px;
   }
-
-  .page-title {
-    font-size: 60px;
-    line-height: 90px;
-    max-width: 950px;
-  }
-
+  
   .page-sub-title {
-    font-size: 24px;
-    margin-bottom: 24px;
+    font-size: 20px;
   }
 
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 4vw;
-  }
-
-  .header-text {
-    /* padding-top: 260px; */
-  }
-
-  .page-text a, .page-text p {
-    line-height: 30px;
-    font-size: 22px;
+  p, a, li {
+    line-height: 26px;
+    font-size: 18px;
   }
 
   .page-text p:first-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
-}
 
-@media screen and (min-width: 1100px) {
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 3vw;
+  button.page-link {
+    line-height: 26px;
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .page-title {
-    /* font-size: 70px;
-    line-height: 100px; */
-    max-width: 1300px;
+  .logo {
+    font-size: 22px;
+  }
+
+  .title {
+    font-size: 46px;
+    line-height: 58px;
+  }
+  
+  .page-sub-title {
+    font-size: 22px;
+  }
+
+  p, a, li {
+    line-height: 32px;
+    font-size: 20px;
+  }
+
+  .page-text p:first-of-type {
+    margin-bottom: 32px;
+  }
+
+  button.page-link {
+    line-height: 32px;
+    font-size: 20px;
+    margin-top: 30px;
   }
 }
 </style>

@@ -47,9 +47,6 @@ export default {
   },
   computed: {
     ...mapState(['page', 'data'])
-    // project() {
-    //   return this.data.find(item => item.slug === this.slug);
-    // }
   },
   mounted() {
     setTimeout(() => {
