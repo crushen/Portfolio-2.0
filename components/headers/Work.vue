@@ -6,7 +6,7 @@
 
       <div class="page-text">
         <p>On a typical day you'll find me crafting websites and user interfaces, helping brands perfect their online presence.</p>
-        <p>If you'd like to find out more about me, please <nuxt-link to="/contact">get in touch</nuxt-link> - I'd love to hear from you! 👋🏻</p>
+        <p>If you'd like to find out more about my work, please <nuxt-link to="/contact">get in touch</nuxt-link> - I'd love to hear from you! 👋🏻</p>
       </div>
 
       <img :src="arrow" class="arrow">
@@ -113,15 +113,18 @@ export default {
 
 .text h3 {
   margin-bottom: 16px;
+  font-size: 18px;
   color: var(--black);
 }
 
 .text p {
   color: var(--grey);
+  font-size: 16px;
 }
 
 .text a {
   color: var(--grey);
+  font-size: 16px;
   margin-top: 10px;
 }
 
