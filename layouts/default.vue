@@ -166,7 +166,7 @@ button.page-link {
 
   .title {
     font-size: 38px;
-    line-height: 48px;
+    line-height: 50px;
   }
   
   .page-sub-title {
@@ -185,6 +185,7 @@ button.page-link {
   button.page-link {
     line-height: 26px;
     font-size: 18px;
+    margin-top: 28px;
   }
 }
 
@@ -214,7 +215,7 @@ button.page-link {
   button.page-link {
     line-height: 32px;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 32px;
   }
 }
 </style>

@@ -21,7 +21,9 @@
           <div class="overlay">
             <div class="text">
               <h3>{{ project.title }}</h3>
+
               <p>{{ project.subTitle }}</p>
+
               <ul class="project-links">
                 <li>
                   <a :href="project.website" target="_blank">View the website</a>
@@ -32,6 +34,7 @@
               </ul>
             </div>
           </div>
+
           <img :src="project.thumbnail.url">
         </li>
       </ul>
@@ -59,7 +62,6 @@ export default {
 
 .arrow {
   width: 20px;
-  /* opacity: 0.8; */
 }
 
 .grid {
@@ -143,6 +145,26 @@ export default {
 
 .card:hover .text {
   top: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .arrow {
+    margin-top: 28px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .arrow {
+    margin-top: 32px;
+  }
 }
 
 </style>
