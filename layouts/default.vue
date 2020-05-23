@@ -4,7 +4,6 @@
     <my-nav />
     <page-header />
     <nuxt />
-    <!-- <my-footer /> -->
   </div>
 </template>
 
@@ -12,14 +11,12 @@
 import pageLoader from '@/components/PageLoader';
 import myNav from '@/components/nav/Nav';
 import pageHeader from '@/components/PageHeader';
-import myFooter from '@/components/Footer';
 
 export default {
   components: {
     pageLoader,
     myNav,
-    pageHeader,
-    myFooter
+    pageHeader
   },
   mounted() {
     window.scrollTo(0,0);
@@ -75,6 +72,11 @@ a {
   color: var(--white);
   text-decoration: none;
   font-weight: 800;
+  transition: 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h2, h3 {
@@ -147,6 +149,13 @@ button.page-link {
   border: 3px solid white;
   border-radius: 100px;
   padding: 10px 24px;
+  transition: 0.2s;
+}
+
+button.page-link:hover {
+  background: var(--orange);
+  border: 3px solid var(--orange);
+  color: var(--black);
 }
 
 @media screen and (min-width: 340px) {
