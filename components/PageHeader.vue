@@ -3,7 +3,7 @@
     <header>
       <background class="background" :page="page" :style="fadeIn"/>
 
-      <div :style="scaleIn">
+      <div class="page-headers" :style="scaleIn">
         <transition 
           name="header" 
           mode="out-in">
@@ -67,7 +67,7 @@ header {
   transition: 0.6s;
 }
 
-.content {
+.page-headers {
   transition: 0.6s;
 }
 
