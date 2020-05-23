@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <div class="nav-bar-container"
       :class="{ 'with-background': lastScrollPosition > 0 }"
       :style="nav">
@@ -55,7 +55,7 @@
         </nav>
       </div>
     </transition>
-  </div>
+  </header>
 </template>
 
 <script>

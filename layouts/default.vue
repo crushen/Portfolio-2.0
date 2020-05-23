@@ -2,7 +2,7 @@
   <div>
     <page-loader/>
     <my-nav />
-    <page-header />
+    <page />
     <nuxt />
   </div>
 </template>
@@ -10,13 +10,13 @@
 <script>
 import pageLoader from '@/components/PageLoader';
 import myNav from '@/components/nav/Nav';
-import pageHeader from '@/components/PageHeader';
+import page from '@/components/Page';
 
 export default {
   components: {
     pageLoader,
     myNav,
-    pageHeader
+    page
   },
   mounted() {
     window.scrollTo(0,0);
