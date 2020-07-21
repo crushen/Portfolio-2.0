@@ -12,21 +12,21 @@
   {
     "title": "Salmo Visa",
     "subTitle": "The ultimate visa organisation tool. Built with Vue.js and Firebase.",
-    "website": "https://meahe.design",
-    "github": "https://github.com/crushen/Meahe-Design",
+    "website": "https://www.salmo.uk/",
+    "github": "https://github.com/crushen/Salmo",
     "thumbnail": {
       "url": "salmo-logo.svg",
       "alt": "Salmo's logo" 
      }
   },
   {
-    "title": "Salmo Visa",
-    "subTitle": "The ultimate visa organisation tool. Built with Vue.js and Firebase.",
-    "website": "https://meahe.design",
-    "github": "https://github.com/crushen/Meahe-Design",
+    "title": "Emma Kate Parkinson",
+    "subTitle": "Digital designer & creative portfolio. Static site generated with Nuxt.js.",
+    "website": "https://www.emmakateparkinson.com/",
+    "github": "https://github.com/crushen/Emma-Portfolio",
     "thumbnail": {
-      "url": "salmo-logo.svg",
-      "alt": "Salmo's logo" 
+      "url": "name.svg",
+      "alt": "Text - Emma Kate Parkinson" 
      }
   },
   {
