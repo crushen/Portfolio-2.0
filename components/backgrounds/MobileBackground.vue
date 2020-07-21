@@ -1,5 +1,6 @@
 <template>
-  <svg 
+  <svg
+    id="mobile-bg"
     :class="{ 'work': (page === '/work'),
               'contact': (page === '/contact'),
               'project': (page === '/work/meahe-design') }" 
