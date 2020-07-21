@@ -94,7 +94,7 @@ h2, h3 {
   color: var(--white);
   letter-spacing: normal;
   font-weight: 900;
-  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.8);
 }
 
 .sub-title {
@@ -109,7 +109,7 @@ h2, h3 {
   font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
-  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.8);
 }
 
 .content {
