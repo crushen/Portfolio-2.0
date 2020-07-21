@@ -10,12 +10,12 @@
     <transition-group 
       name="list" 
       tag="g">
-      <circle class="items circ circ-1" key="circ-1" cy="140" cx="250" r="120"/>
+      <circle class="items circ circ-1" key="circ-1" cy="140" :cx="innerWidth - 450" r="120"/>
       <circle class="items circ circ-2" key="circ-2" cy="250" :cx="innerWidth - 150" :r="innerWidth / 8"/>
 
-      <circle class="items circ circ-small-1" key="circ-3" cy="500" cx="150" r="50"/>
-      <circle class="items circ circ-small-2" key="circ-4" cy="700" cx="500" r="50"/>
-      <circle class="items circ circ-small-4" key="circ-6" cy="900" cx="150" r="50"/>
+      <circle class="items circ circ-small-1" key="circ-3" cy="500" :cx="innerWidth - 550" r="50"/>
+      <circle class="items circ circ-small-2" key="circ-4" cy="700" :cx="innerWidth - 300" r="50"/>
+      <circle class="items circ circ-small-4" key="circ-6" cy="900" :cx="innerWidth - 600" r="50"/>
     </transition-group>
   </svg>
 </template>
@@ -70,7 +70,7 @@ svg {
 }
 
 .contact .circ-1 {
-  transform: translate3d(100px, 200px, 0) scale(0.9);
+  transform: translate3d(-50px, 150px, 0) scale(0.9);
 }
 
 .work .circ-2 {
@@ -78,7 +78,7 @@ svg {
 }
 
 .contact .circ-2 {
-  transform: translate3d(100px, 200px, 0) scale(0.8);
+  transform: translate3d(100px, 350px, 0) scale(0.8);
 }
 
 .work .circ-small-1 {

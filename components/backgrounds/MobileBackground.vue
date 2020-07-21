@@ -13,7 +13,7 @@
 
       <circle class="items circ circ-small-1" key="circ-3" cy="20" :cx="innerWidth - 280" r="30"/>
       <circle class="items circ circ-small-2" key="circ-4" cy="150" :cx="innerWidth - 280" r="30"/>
-      <circle class="items circ circ-small-3" key="circ-6" cy="40" cx="50" r="30"/>
+      <circle class="items circ circ-small-3" key="circ-6" cy="40" :cx="innerWidth - 330" r="30"/>
     </transition-group>
   </svg>
 </template>

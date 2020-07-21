@@ -13,9 +13,9 @@
       <circle class="items circ circ-1" key="circ-1" cy="140" :cx="innerWidth - 600" r="120"/>
       <circle class="items circ circ-2" key="circ-2" cy="250" :cx="innerWidth - 150" :r="innerWidth / 8"/>
 
-      <circle class="items circ circ-small-1" key="circ-3" cy="450" cx="100" r="50"/>
+      <circle class="items circ circ-small-1" key="circ-3" cy="450" :cx="innerWidth - 1200" r="50"/>
       <circle class="items circ circ-small-2" key="circ-4" cy="650" :cx="innerWidth - 450" r="50"/>
-      <circle class="items circ circ-small-4" key="circ-6" cy="550" cx="450" r="50"/>
+      <circle class="items circ circ-small-4" key="circ-6" cy="550" :cx="innerWidth - 800" r="50"/>
     </transition-group>
   </svg>
 </template>
