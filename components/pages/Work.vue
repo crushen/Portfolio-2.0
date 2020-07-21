@@ -65,12 +65,12 @@ export default {
 }
 
 .grid {
-  border: 4px solid white;
+  border: 10px solid white;
   background: white;
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  grid-gap: 4px;
+  grid-gap: 10px;
 }
 
 .card {
