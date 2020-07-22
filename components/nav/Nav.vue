@@ -154,10 +154,6 @@ export default {
   margin-bottom: 4px;
 }
 
-a {
-  color: var(--white);
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -168,7 +164,7 @@ a:hover {
   height: 100vh;
   width: 75%;
   max-width: 400px;
-  background: #81d4fa;
+  background: #484f6b;
   position: fixed;
   top: 0;
   right: 0;
@@ -193,15 +189,23 @@ nav a {
 nav a:nth-of-type(1) {
   animation-delay: 0.2s;
 }
+
 nav a:nth-of-type(2) {
   animation-delay: 0.3s;
 }
+
 nav a:nth-of-type(3) {
   animation-delay: 0.4s;
 }
 
-nav .nuxt-link-active {
-  color: var(--black);
+nav .nuxt-link-active:nth-of-type(1) {
+  color: #ffb2ab;
+}
+nav .nuxt-link-active:nth-of-type(2) {
+  color: #e0bce6;
+}
+nav .nuxt-link-active:nth-of-type(3) {
+  color: #a9e3eb;
 }
 
 /* TABLET + */
@@ -217,15 +221,6 @@ nav .nuxt-link-active {
   nav a {
     margin-left: 32px;
     font-size: 16px;
-    color: var(--grey);
-  }
-
-  nav a:hover {
-    color: var(--white);
-  }
-
-  nav .nuxt-link-active {
-    color: var(--white);
   }
 }
 </style>
