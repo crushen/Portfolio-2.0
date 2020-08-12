@@ -84,6 +84,7 @@ export default {
 
 .card img {
   width: 50%;
+  max-width: 180px;
   opacity: 1;
   transition: 0.4s;
 }
