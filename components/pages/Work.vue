@@ -83,7 +83,7 @@ export default {
 }
 
 .card img {
-  width: 40%;
+  width: 50%;
   opacity: 1;
   transition: 0.4s;
 }
