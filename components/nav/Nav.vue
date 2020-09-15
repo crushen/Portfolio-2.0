@@ -10,7 +10,8 @@
         <button
           v-if="innerWidth < 1000"
           @click="openNav"
-          class="nav-button">
+          class="nav-button"
+          aria-label="Open navigation">
           <div class="nav-line"></div>
           <div class="nav-line"></div>
           <div class="nav-line"></div>
