@@ -1,7 +1,7 @@
 <template>
   <section>
     <section class="header-text">
-      <h1 class="page-sub-title">Work</h1>
+      <h1 class="page-sub-title">Work.</h1>
       <h2 class="title page-title">Take a look at some of the projects I've been working on recently.</h2>
 
       <div class="page-text">
@@ -157,11 +157,11 @@ export default {
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -170,9 +170,9 @@ export default {
     margin-top: 32px;
   }
 
-  .grid {
+  /* .grid {
     grid-template-columns: repeat(4, 1fr);
-  }
+  } */
 
   .card {
     height: 400px;

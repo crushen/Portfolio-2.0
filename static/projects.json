@@ -1,7 +1,7 @@
 [
   {
-    "title": "Salmo Visa",
-    "subTitle": "The ultimate visa organisation tool. Built with Vue.js and Firebase - prototype coming soon.",
+    "title": "Salmo",
+    "subTitle": "The ultimate visa organisation tool. Vue.js, Firebase & GraphCMS - prototype coming soon.",
     "website": "https://www.salmo.uk/",
     "github": "https://github.com/crushen/Salmo",
     "thumbnail": {
@@ -11,32 +11,22 @@
   },
   {
     "title": "Meahė Design",
-    "subTitle": "Website for a Taiwanese creative design company based in London. Built with Vue.js and GraphCMS.",
+    "subTitle": "Website for a Taiwanese creative design company based in London. Vue.js and GraphCMS.",
+    "website": "https://www.meahe.design",
     "github": "https://github.com/crushen/Meahe-Design",
     "thumbnail": {
       "url": "meahe-logo.svg",
       "alt": "Meahė Design logo." 
-    },
-    "website": "https://meahe.design"
+    }
   },
   {
     "title": "Emma Kate Parkinson",
     "subTitle": "An online portfolio for a digital designer and creative. Static site generated with Nuxt.js.",
-    "website": "https://www.emmakateparkinson.com/",
+    "website": "https://www.emmakateparkinson.com",
     "github": "https://github.com/crushen/Emma-Portfolio",
     "thumbnail": {
       "url": "emma-logo.svg",
       "alt": "Text - Emma Kate Parkinson" 
      }
-  },
-  {
-    "title": "Meahė Design",
-    "subTitle": "Website for a Taiwanese creative design company based in London. Built with Vue.js and GraphCMS.",
-    "github": "https://github.com/crushen/Meahe-Design",
-    "thumbnail": {
-      "url": "meahe-logo.svg",
-      "alt": "Meahė Design logo." 
-    },
-    "website": "https://meahe.design"
   }
 ]
