@@ -1,7 +1,7 @@
 <template>
   <section class="header-text contact">
     <h1 class="page-sub-title">Contact.</h1>
-    <h2 class="title page-title">Have any enquiries, or just want to say hello?</h2>
+    <h2 class="title page-title">Have any questions, or just want to say hello?</h2>
 
     <div class="page-text">
       <p>You can send me an email at <a href="mailto:charlotterushen@hotmail.com" target="_blank">charlotterushen@hotmail.com</a>.</p>
