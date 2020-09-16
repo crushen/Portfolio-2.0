@@ -39,6 +39,7 @@ export default {
 }
 
 .logo {
+  overflow: hidden;
   transition: 0.6s;
   animation: rainbow 0.8s linear infinite;
 }

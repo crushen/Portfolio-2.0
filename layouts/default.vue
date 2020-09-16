@@ -35,7 +35,7 @@ export default {
 
   --orange: #FFA69E;
   --green: #B8F2E6;
-  --blue: #9ed4db;
+  --blue: #92ced6;
   --purple: #c4a5c9;
 }
 
@@ -58,6 +58,7 @@ html {
 *:before,
 *:after {
   box-sizing: border-box;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
