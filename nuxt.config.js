@@ -1,10 +1,10 @@
-import projects from './static/projects.json';
+//import projects from './static/projects.json';
 
-let dynamicRoutes = () => {
- return new Promise(resolve => {
-   resolve(projects.map(item => `work/${item.slug}`))
- })
-}
+// let dynamicRoutes = () => {
+//  return new Promise(resolve => {
+//    resolve(projects.map(item => `work/${item.slug}`))
+//  })
+// }
 
 export default {
   mode: 'universal',
@@ -28,10 +28,6 @@ export default {
     middleware: 'pages'
   },
   generate: {
-    routes: dynamicRoutes
-  },
-  build: {
-    extend (config, ctx) {
-    }
+    //routes: dynamicRoutes
   }
 }
