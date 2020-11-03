@@ -20,6 +20,16 @@
     }
   },
   {
+    "title": "Superhero Search",
+    "subTitle": "Still a work in progress - A personal project to develop my Unit Testing skills with Jest & Vue Test Utils.",
+    "website": "https://superherosearch.netlify.app",
+    "github": "https://github.com/crushen/Superhero-Search",
+    "thumbnail": {
+      "url": "superhero-search.svg",
+      "alt": "Superhero Search logo."
+    }
+  },
+  {
     "title": "Emma Kate Parkinson",
     "subTitle": "An online portfolio for a digital designer and creative. Static site generated with Nuxt.js.",
     "website": "https://www.emmakateparkinson.co.uk",
