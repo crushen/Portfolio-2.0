@@ -20,6 +20,16 @@
     }
   },
   {
+    "title": "Hayley Betty Butler",
+    "subTitle": "An online portfolio for a London based artist. Nuxt.js and GraphCMS.",
+    "website": "https://hayleybettybutler.com",
+    "github": "https://github.com/crushen/Hayley-Butler-Portfolio",
+    "thumbnail": {
+      "url": "HB-logo.svg",
+      "alt": "Hayley Betty Butler logo." 
+    }
+  },
+  {
     "title": "Superhero Search",
     "subTitle": "Still a work in progress - A personal project to develop my Unit Testing skills with Jest & Vue Test Utils.",
     "website": "https://superherosearch.netlify.app",

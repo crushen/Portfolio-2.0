@@ -89,6 +89,10 @@ export default {
   transition: 0.4s;
 }
 
+.card:nth-of-type(3) img {
+  width: 30%;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -163,6 +167,10 @@ export default {
   .card {
     height: 300px;
   }
+
+  .card:nth-of-type(5) {
+    grid-column: 1 / 3;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -171,11 +179,31 @@ export default {
   }
 
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .card {
     height: 400px;
+  }
+
+  .card:nth-of-type(1) {
+    grid-column: 1 / 3;
+  }
+
+  .card:nth-of-type(2) {
+    grid-column: 3 / 5;
+  }
+
+  .card:nth-of-type(3) {
+    grid-column: 5 / 7;
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 1 / 4;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: 4 / 7;
   }
 }
 
